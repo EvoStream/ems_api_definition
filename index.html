@@ -1,140 +1,23 @@
-<!DOCTYPE html>
-<html>
-  <body>
-    <h2>EMS API Definitions</h2>
-      <pre><code>
-      1. Document Definitions
-      2. Overview
-      3. Run-Time API
-         1. Accessing the Runtime API
-            - ASCII
-            - HTTP
-            - PHP and JavaScript
-            - JSON
-         2. Configuring and Receiving Event Notifications
-            - Sinks
-         3. User Defined Variables
-         4. Streams vs Stream Configs and API Command Return Values
-            - Stream Configs
-            - Streams
-      4. EvoStream Media Server API
-         1. Streams
-            - pullStream
-            - pushStream
-            - createHLSStream
-            - createHDSStream
-            - createMSSStream
-            - createDASHStream
-            - record
-            - transcode
-         2. Aliasing
-            - listStreamsIds
-            - getStreamInfo
-            - listStreams
-            - getStreamsCount
-            - shutdownStream
-            - listConfig
-            - removeConfig
-            - addStreamAlias
-            - listStreamAliases
-            - removeStreamAlias
-            - flushStreamAliases
-            - addGroupNameAlias
-            - flushGroupNameAliases
-            - getGroupNameByAlias
-            - listGroupNameAliases
-            - removeGroupNameAlias
-            - listHttpStreamingSessions
-            - createIngestPoint
-            - removeIngestPoint
-            - listIngestPoints
-            - startwebrtc
-            - stopwebrtc
-            - addGroupNameAlias
-            - flushGroupNameAliases
-            - getGroupNameByAlias
-            - listGroupNameAliases
-            - removeGroupNameAlias
-            - listHttpStreamingSessions
-         3. Utility and Feature API Functions
-            - launchProcess
-            - setTimer
-            - listTimers
-            - removeTimer
-            - generateLazyPullFile
-            - generateServerPlaylist
-            - insertPlaylistItem
-            - uploadMedia
-            - getMetadata
-            - pushMetadata
-            - shutdownMetadata
-            - listStorage
-            - addStorage
-            - removeStorage
-            - setAuthentication
-            - setLogLevel
-            - version
-            - quit
-            - help
-            - shutdownServer
-         4. Connections
-            - listConnectionsIds
-            - getConnectionInfo
-            - listConnections
-            - clientsConnected
-            - httpClientsConnected
-            - getExtendedConnectionCounters
-            - resetMaxFdCounters
-            - resetTotalFdCounters
-            - getConnectionsCount
-            - getConnectionsCountLimit
-            - setConnectionsCountLimit
-            - getBandwidth
-            - SetBandwidthLimit
-         5. Services
-            - listServices
-            - createService
-            - enableService
-            - shutdownService
-      5. EMS Event Notification System
-         1. Stream Event Definitions
-            - inStreamCreated, outStreamCreated, streamCreated
-            - inStreamClosed, outStreamClosed, streamClosed
-            - inStreamCodecsUpdated, outStreamCodecsUpdated, streamCodecsUpdated
-            - audioFeedStopped
-            - videoFeedStopped
-         2. Adaptive Streaming/File-based Streaming Events
-            - hlsChunkCreated, hdsChunkCreated, mssChunkCreated, dashChunkCreated
-            - hlsChunkClosed, hdsChunkClosed, mssChunkClosed, dashChunkClosed
-            - hlsChunkError, hdsChunkError, mssChunkError, dashChunkError
-            - hlsChildPlaylistUpdated, hdsChildPlaylistUpdated
-            - hlsMasterPlaylistUpdated, hdsMasterPlaylistUpdated
-            - mssPlaylistUpdated, dashPlaylistUpdated
-         3. Web Server Events
-            - streamingSessionStarted
-            - streamingSessionEnded
-            - fileDownloaded
-         4. API Based Events
-            - cliRequest
-            - cliResponse
-            - processStarted, processStopped
-            - timerCreated
-            - timerTriggered
-            - timerClosed
-         5. Connection Based Events
-            - protocolRegisteredToApp
-            - protocolUnregisteredFromApp
-            - carrierCreated
-            - carrierClosed
-         6. Application Based Events
-            - applicationStart, applicationStop
-            - serverStarted
-            - serverStopped
-         7. Web Server Events
-            - streamingSessionStarted
-            - streamingSessionEnded
-            - fileDownloaded
-         6. Event Table of Protocol Types
-      </code></pre>
-  </body>
-</html>
+---
+layout: default
+---
+
+<div class="home">
+
+  <h1 class="page-heading">Posts</h1>
+
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+</div>
