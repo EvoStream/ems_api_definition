@@ -12,8 +12,8 @@ email: admin@evostream.com
 description: > # this means to ignore newlines until "baseurl:"
   EvoStream, 1010 Turquoise, Suite 101,
   San Diego, CA 92109, California, USA.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://evostream.github.io/ems_api_definition" # the base hostname & protocol for your site
+baseurl: "/ems_api_definition" # the subpath of your site, e.g. /blog
+url: "http://evostream.github.io" # the base hostname & protocol for your site
 twitter_username: EvoStreamInc
 github_username:  EvoStream
 
