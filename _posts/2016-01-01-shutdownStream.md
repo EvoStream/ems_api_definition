@@ -1,11 +1,10 @@
 ---
 layout: post
+title: shutdownStream
 date:   2016-01-01 00:00:00 +0000
 categories: jekyll update
-permalink: shutdownStream
+permalink: shutdown_stream
 ---
-
-# shutdownStream
 
 Terminates a specific stream. When `permanently=1` is used, this command is analogous to `removeConfig`.
 
@@ -194,9 +193,9 @@ The JSON response contains the following details about the stream being shut dow
         - canDropFrames – *Outstreams only*. Flag set by client allowing for dropped frames/packets
         - creationTimestamp – The time (in UNIX secs) when the stream was created
         - inStreamUniqueId – *For pushed streams.* The id of the source stream
-        - name – the “localstreamname” for this stream
+        - name – the `localstreamname` for this stream
         - queryTimestamp – The time (in UNIX secs) when this data was populated
-        - type – The type of stream this is. See **getStreamInfo** for details
+        - type – The type of stream this is. See `getStreamInfo` for details
         - uniqueId – The unique ID of the stream (integer)
         - upTime – The time in seconds that the stream has been alive/running for
         - video
@@ -210,7 +209,7 @@ The JSON response contains the following details about the stream being shut dow
         - name – the “localstreamname” for this stream
         - outStreamsUniqueIDs – *For pulled streams.* An array of the “out” stream IDs associated with this “in” stream.
         - queryTimestamp – The time (in UNIX secs) when this data was populated.
-        - type – The type of stream this is. See **getStreamInfo** for details.
+        - type – The type of stream this is. See `getStreamInfo` for details.
         - uniqueId – The unique ID of the stream (integer)
         - uptime – The time in seconds that the stream has been alive/running for
       - txInvokes – Number of sent RTMP function invokes
@@ -221,7 +220,7 @@ The JSON response contains the following details about the stream being shut dow
     - name – the “localstreamname” for this stream
     - outStreamsUniqueIds – *For pulled streams.* An array of the “out” stream IDs associated with this “in” stream
     - queryTimestamp – The time (in UNIX seconds) when this data was populated
-    - type – The type of stream this is. See **getStreamInfo** for details
+    - type – The type of stream this is. See `getStreamInfo` for details
     - uniqueId – The unique ID of the stream (integer)
     - upTime – The time in seconds that the stream has been alive/running for
 

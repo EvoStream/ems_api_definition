@@ -1,11 +1,10 @@
 ---
 layout: post
+title: pullStream
 date:   2016-01-01 00:00:00 +0000
 categories: jekyll update
-permalink: pullStream
+permalink: pull_stream
 ---
-
-# pullStream
 
 This will try to pull in a stream from an external source. Once a stream has been successfully pulled it is assigned a “local stream name” which can be used to access the stream from the EMS.
 

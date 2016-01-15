@@ -1,11 +1,10 @@
 ---
 layout: post
+title: listStreamAliases
 date:   2016-01-01 00:00:00 +0000
 categories: jekyll update
-permalink: listStreamAliases
+permalink: list_stream_aliases
 ---
-
-# listStreamAliases
 
 Returns a complete list of aliases.
 

@@ -1,11 +1,10 @@
 ---
 layout: post
+title: removeGroupNameAliases
 date:   2016-01-01 00:00:00 +0000
 categories: jekyll update
-permalink: removeGroupNameAliases
+permalink: remove_group_name_aliases
 ---
-
-# removeGroupNameAliases
 
 This command returns a complete list of group name aliases.
 

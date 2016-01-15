@@ -1,11 +1,10 @@
 ---
 layout: post
+title: flushGroupNameAliases
 date:   2016-01-01 00:00:00 +0000
 categories: jekyll update
-permalink: flushGroupNameAliases
+permalink: flush_group_name_aliases
 ---
-
-# flushGroupNameAliases
 
 This command invalidates all group name aliases.
 

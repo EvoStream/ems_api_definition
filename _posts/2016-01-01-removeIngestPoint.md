@@ -1,11 +1,10 @@
 ---
 layout: post
+title: removeIngestPoint
 date:   2016-01-01 00:00:00 +0000
 categories: jekyll update
-permalink: removeIngestPoint
+permalink: remove_ingest_point
 ---
-
-# removeIngestPoint
 
 Removes an RTMP ingest point.
 

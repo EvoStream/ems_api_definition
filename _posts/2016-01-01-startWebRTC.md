@@ -1,11 +1,10 @@
 ---
 layout: post
+title: startWebRTC
 date:   2016-01-01 00:00:00 +0000
 categories: jekyll update
-permalink: startWebRTC
+permalink: start_web_rtc
 ---
-
-# startWebRTC
 
 Starts a WebRTC signalling client to an ERS (Evostream Rendezvous Server)
 

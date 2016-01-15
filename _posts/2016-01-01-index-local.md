@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "EMS API Definition"
+title:  "EMS API Definition (Local Test Only)"
 date:   2016-01-01 00:01:00 +0000
 categories: jekyll update
 permalink: table_of_contents_local
@@ -22,73 +22,73 @@ permalink: table_of_contents_local
       - Streams
 4. EvoStream Media Server API
    1. Streams
-      - [pullStream](/pullStream)
-      - [pushStream](/pushStream)
-      - [createHLSStream](/createHLSStream)
-      - [createHDSStream](/createHDSStream)
-      - [createMSSStream](/createMSSStream)
-      - [createDASHStream](/createDASHStream)
+      - [pullStream](/pull_stream)
+      - [pushStream](/push_stream)
+      - [createHLSStream](/create_hls_stream)
+      - [createHDSStream](/create_hds_stream)
+      - [createMSSStream](/create_mss_stream)
+      - [createDASHStream](/create_dash_stream)
       - [record](/record)
       - [transcode](/transcode)
    2. Aliasing
-      - [listStreamsIds](/listStreamsIds)
-      - [getStreamInfo](/getStreamInfo)
-      - [listStreams](/listStreams)
-      - [getStreamsCount](/getStreamsCount)
-      - [shutdownStream](/shutdownStream)
-      - [listConfig](/listConfig)
-      - [removeConfig](/removeConfig)
-      - [getConfigInfo](/getConfigInfo)
-      - [addStreamAlias](/addStreamAlias)
-      - [listStreamAliases](/listStreamAliases)
-      - [removeStreamAlias](/removeStreamAlias)
-      - [flushStreamAliases](/flushStreamAliases)
-      - [addGroupNameAlias](/addGroupNameAlias)
-      - [flushGroupNameAliases](/flushGroupNameAliases)
-      - [getGroupNameByAlias](/getGroupNameByAlias)
-      - [listGroupNameAliases](/listGroupNameAliases)
-      - [removeGroupNameAliases](/removeGroupNameAliases)
-      - listHttpStreamingSessions
-      - [createIngestPoint](/createIngestPoint)
-      - [removeIngestPoint](/removeIngestPoint)
-      - [listIngestPoints](/listIngestPoints)
-      - [startWebRTC](/startWebRTC)
-      - [stopWebRTC](/stopWebRTC)
+      - [listStreamsIds](/list_streams_ids)
+      - [getStreamInfo](/get_stream_info)
+      - [listStreams](/list_streams)
+      - [getStreamsCount](/get_streams_count)
+      - [shutdownStream](/shutdown_stream)
+      - [listConfig](/list_config)
+      - [removeConfig](/remove_config)
+      - [getConfigInfo](/get_config_info)
+      - [addStreamAlias](/add_stream_alias)
+      - [listStreamAliases](/list_stream_aliases)
+      - [removeStreamAlias](/remove_stream_alias)
+      - [flushStreamAliases](/flush_stream_aliases)
+      - [addGroupNameAlias](/add_group_name_alias)
+      - [flushGroupNameAliases](/flush_group_name_aliases)
+      - [getGroupNameByAlias](/get_group_name_by_alias)
+      - [listGroupNameAliases](/list_group_name_aliases)
+      - [removeGroupNameAliases](/remove_group_name_aliases)
+      - [listHttpStreamingSessions](/list_http_streaming_sessions)
+      - [createIngestPoint](/create_ingest_point)
+      - [removeIngestPoint](/remove_ingest_point)
+      - [listIngestPoints](/list_ingest_points)
+      - [startWebRTC](/start_web_rtc)
+      - [stopWebRTC](/stop_web_rtc)
    3. Utility and Feature API Functions
-      - launchProcess
-      - setTimer
-      - listTimers
-      - removeTimer
-      - generateLazyPullFile
-      - generateServerPlaylist
-      - insertPlaylistItem
-      - uploadMedia
-      - getMetadata
-      - pushMetadata
-      - shutdownMetadata
-      - listStorage
+      - [launchProcess](/launch_process)
+      - [setTimer](/set_timer)
+      - [listTimers](/list_timers)
+      - [removeTimer](/remove_timer)
+      - [generateLazyPullFile](/generate_lazy_pull_file)
+      - [generateServerPlaylist](/generate_server_playlist)
+      - [insertPlaylistItem](/insert_playlist_item)
+      - [uploadMedia](/upload_media)
+      - [getMetadata](/get_metadata)
+      - [pushMetadata](/push_metadata)
+      - [shutdownMetadata](/shutdown_metadata)
+      - [listStorage](/list_storage)
       - addStorage
-      - removeStorage
-      - setAuthentication
-      - setLogLevel
-      - version
-      - quit
-      - help
-      - shutdownServer
+      - [removeStorage](/remove_storage)
+      - [setAuthentication](/set_authentication)
+      - [setLogLevel](/set_log_level)
+      - [version](/version)
+      - [quit](/quit)
+      - [help](/help)
+      - [shutdownServer](/shutdown_server)
    4. Connections
-      - listConnectionsIds
-      - getConnectionInfo
-      - listConnections
-      - clientsConnected
-      - httpClientsConnected
-      - getExtendedConnectionCounters
-      - resetMaxFdCounters
-      - resetTotalFdCounters
-      - getConnectionsCount
-      - getConnectionsCountLimit
-      - setConnectionsCountLimit
-      - getBandwidth
-      - SetBandwidthLimit
+      - [listConnectionsIds](/list_connections_ids)
+      - [getConnectionInfo](/get_connection_info)
+      - [listConnections](/list_connections)
+      - [clientsConnected](/clients_connected)
+      - [httpClientsConnected](/http_clients_connected)
+      - [getExtendedConnectionCounters](/get_extended_connection_counters)
+      - [resetMaxFdCounters](/reset_max_fd_counters)
+      - [resetTotalFdCounters](/reset_total_fd_counters)
+      - [getConnectionsCount](/get_connections_count)
+      - [getConnectionsCountLimit](/get_connections_count_limit)
+      - [setConnectionsCountLimit](/set_connections_count_limit)
+      - [getBandwidth](/get_bandwidth)
+      - setBandwidthLimit
    5. Services
       - listServices
       - createService

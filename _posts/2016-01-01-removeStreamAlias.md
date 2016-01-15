@@ -1,11 +1,10 @@
 ---
 layout: post
+title: removeStreamAlias
 date:   2016-01-01 00:00:00 +0000
 categories: jekyll update
-permalink: removeStreamAlias
+permalink: remove_stream_alias
 ---
-
-# removeStreamAlias
 
 Removes an alias of a stream.
 

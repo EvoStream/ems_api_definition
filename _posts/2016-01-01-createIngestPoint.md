@@ -1,11 +1,10 @@
 ---
 layout: post
+title: createIngestPoint
 date:   2016-01-01 00:00:00 +0000
 categories: jekyll update
-permalink: createIngestPoint
+permalink: create_ingest_point
 ---
-
-# createIngestPoint
 
 Creates an RTMP ingest point, which mandates that streams pushed into the EMS have a target stream name which matches one Ingest Point privateStreamName.
 

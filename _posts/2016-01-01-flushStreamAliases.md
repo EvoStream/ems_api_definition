@@ -1,11 +1,10 @@
 ---
 layout: post
+title: flushStreamAliases
 date:   2016-01-01 00:00:00 +0000
 categories: jekyll update
-permalink: flushStreamAliases
+permalink: flush_stream_aliases
 ---
-
-# flushStreamAliases
 
 Invalidates all streams aliases.
 

@@ -1,11 +1,10 @@
 ---
 layout: post
+title: getStreamInfo
 date:   2016-01-01 00:00:00 +0000
 categories: jekyll update
-permalink: getStreamInfo
+permalink: get_stream_info
 ---
-
-# getStreamInfo
 
 Returns a detailed set of information about a stream.
 

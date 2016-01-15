@@ -1,11 +1,10 @@
 ---
 layout: post
+title: listStreams
 date:   2016-01-01 00:00:00 +0000
 categories: jekyll update
-permalink: listStreams
+permalink: list_streams
 ---
-
-# listStreams
 
 Provides a detailed description of all active streams.
 

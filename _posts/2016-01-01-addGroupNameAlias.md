@@ -1,11 +1,10 @@
 ---
 layout: post
+title: addGroupNameAlias
 date:   2016-01-01 00:00:00 +0000
 categories: jekyll update
-permalink: addGroupNameAlias
+permalink: add_group_name_alias
 ---
-
-# addGroupNameAlias
 
 This command creates secondary name(s) for group names. Once an alias is created the group name cannot be used to request HTTP playback of that stream. Once an alias is used (requested by a client) the alias is removed. Aliases are designed to be used to protect/hide your source streams.
 

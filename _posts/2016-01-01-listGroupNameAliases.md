@@ -1,11 +1,10 @@
 ---
 layout: post
+title: listGroupNameAliases
 date:   2016-01-01 00:00:00 +0000
 categories: jekyll update
-permalink: listGroupNameAliases
+permalink: list_group_name_aliases
 ---
-
-# listGroupNameAliases
 
 This command returns a complete list of group name aliases.
 

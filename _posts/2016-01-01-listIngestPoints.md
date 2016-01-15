@@ -1,11 +1,10 @@
 ---
 layout: post
+title: listIngestPoints
 date:   2016-01-01 00:00:00 +0000
 categories: jekyll update
-permalink: listIngestPoints
+permalink: list_ingest_points
 ---
-
-# listIngestPoints
 
 Lists the currently available Ingest Points.
 

@@ -1,11 +1,10 @@
 ---
 layout: post
+title: removeConfig
 date:   2016-01-01 00:00:00 +0000
 categories: jekyll update
-permalink: removeConfig
+permalink: remove_config
 ---
-
-# removeConfig
 
 This command will both stop the stream and remove the corresponding configuration entry. This command is the same as performing `shutdownStream permanently=1`.
 
