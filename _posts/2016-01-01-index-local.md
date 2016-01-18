@@ -6,18 +6,18 @@ categories: jekyll update
 permalink: table_of_contents_local
 ---
 
-1. Document Definitions
-2. Overview
-3. Run-Time API
-   1. Accessing the Runtime API
+1. [Document Definitions](document_definitions)
+2. [Overview](overview)
+3. [Run-Time API](run_time_api)
+   1. [Accessing the Runtime API](accessing_runtime_api)
       - ASCII
       - HTTP
       - PHP and JavaScript
       - JSON
-   2. Configuring and Receiving Event Notifications
+   2. [Configuring and Receiving Event Notifications](configuring_and_receiving_event_notifications)
       - Sinks
-   3. User Defined Variables
-   4. Streams vs Stream Configs and API Command Return Values
+   3. [User Defined Variables](user_defined_variables)
+   4. [Streams vs Stream Configs and API Command Return Values](streams_vs_stream_configs_and_api_command_return_values)
       - Stream Configs
       - Streams
 4. EvoStream Media Server API
@@ -67,7 +67,7 @@ permalink: table_of_contents_local
       - [pushMetadata](/push_metadata)
       - [shutdownMetadata](/shutdown_metadata)
       - [listStorage](/list_storage)
-      - addStorage
+      - [addStorage](/add_storage)
       - [removeStorage](/remove_storage)
       - [setAuthentication](/set_authentication)
       - [setLogLevel](/set_log_level)
@@ -88,48 +88,49 @@ permalink: table_of_contents_local
       - [getConnectionsCountLimit](/get_connections_count_limit)
       - [setConnectionsCountLimit](/set_connections_count_limit)
       - [getBandwidth](/get_bandwidth)
-      - setBandwidthLimit
+      - [setBandwidthLimit](/set_bandwidth_limit)
    5. Services
-      - listServices
-      - createService
-      - enableService
-      - shutdownService
+      - [listServices](/list_services)
+      - [createService](/create_service)
+      - [enableService](/enable_service)
+      - [shutdownService](/shutdown_service)
 5. EMS Event Notification System
    1. Stream Event Definitions
-      - inStreamCreated, outStreamCreated, streamCreated
-      - inStreamClosed, outStreamClosed, streamClosed
-      - inStreamCodecsUpdated, outStreamCodecsUpdated, streamCodecsUpdated
-      - audioFeedStopped
-      - videoFeedStopped
-   2. Adaptive Streaming/File-based Streaming Events
+      - [inStreamCreated, outStreamCreated, streamCreated](stream_created)
+      - [inStreamClosed, outStreamClosed, streamClosed](stream_closed)
+      - [inStreamCodecsUpdated, outStreamCodecsUpdated, streamCodecsUpdated](codecs_updated)
+      - [audioFeedStopped](audio_feed_stopped)
+      - [videoFeedStopped](video_feed_stopped)
+   2. [Adaptive Streaming/File-based Streaming Events](adaptive_streaming)
       - hlsChunkCreated, hdsChunkCreated, mssChunkCreated, dashChunkCreated
       - hlsChunkClosed, hdsChunkClosed, mssChunkClosed, dashChunkClosed
       - hlsChunkError, hdsChunkError, mssChunkError, dashChunkError
       - hlsChildPlaylistUpdated, hdsChildPlaylistUpdated
       - hlsMasterPlaylistUpdated, hdsMasterPlaylistUpdated
       - mssPlaylistUpdated, dashPlaylistUpdated
-   3. Web Server Events
+   3. [Web Server Events](web_server_events)
       - streamingSessionStarted
       - streamingSessionEnded
       - fileDownloaded
-   4. API Based Events
+   4. [API Based Events](api_based_events)
       - cliRequest
       - cliResponse
       - processStarted, processStopped
       - timerCreated
       - timerTriggered
       - timerClosed
-   5. Connection Based Events
+   5. [Connection Based Events](connection_based_events)
       - protocolRegisteredToApp
       - protocolUnregisteredFromApp
       - carrierCreated
       - carrierClosed
-   6. Application Based Events
+   6. [Application Based Events](application_based_events)
       - applicationStart, applicationStop
       - serverStarted
       - serverStopped
-   7. Web Server Events
+   7. [Web Server Events](web_server_events)
       - streamingSessionStarted
       - streamingSessionEnded
       - fileDownloaded
-   6. Event Table of Protocol Types
+   6. [Event Table of Protocol Types](event_table_of_protocol_types)
+
