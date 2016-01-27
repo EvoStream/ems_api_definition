@@ -10,7 +10,7 @@ The EvoStream Media Server (EMS) generates notifications based upon events that 
 
 Event Notifications are **disabled** by default and must be enabled by modifying the EMS config file: config.lua.
 
-To enable Event Notifications you will need to Enable/Uncomment the *eventLogger* section of the config.lua file. *Comments in LUA are specified by either a “--“ for a single line, or denoted by a “--\[\[“ to start a comment block and a “\]\]--“ to end a comment block. By default the eventLogger section is commented out using block style comments, so you will need to remove both the* “**--\[\[**“ *and* “**\]\]--**“ *strings.* See the Configuration Files section for more information.
+To enable Event Notifications you will need to Enable/Uncomment the *eventLogger* section of the config.lua file. Comments in LUA are specified by either a `--` for a single line, or denoted by a `--[[` to start a comment block and a `]]--` to end a comment block. By default the eventLogger section is commented out using block style comments, so you will need to remove both the `--[[` and `]]--` strings. See the Configuration Files section for more information.
 
 ------
 

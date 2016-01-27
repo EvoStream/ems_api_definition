@@ -12,9 +12,7 @@ The ASCII interface is often the first interface used by users. It can be access
 
 To access the API via the telnet interface, a telnet application will need to be launched on the same computer that the EMS is running on. The command to open telnet from a command prompt should look something like the following:
 
-``` 
-telnet localhost 1112
-```
+    telnet localhost 1112
 
 **Note:**
 
@@ -26,10 +24,8 @@ Telnet may need to be enabled using Windows® operating systems. To do this, go 
 
 Please also note that on Windows®, the default telnet behavior will need to be changed. The local echo and new line mode should be set for proper behavior. Once telnet is launched, exit the telnet session by typing “**ctrl+\]**”. Then enter the following commands:
 
-``` 
-set localecho
-set crlf
-```
+    set localecho
+    set crlf
 
 To return to the Windows® telnet session, press **Enter**/**Return** key.
 
@@ -41,9 +37,7 @@ An example of a command request and response from a telnet session would be the 
 
 **Response:**
 
-``` 
-☺«{"data":{"banner":"EvoStream Media Server (www.evostream.com) version 1.7.0. build 4153 with hash: c50ee04ec98886ed1f54d599355e04346bf50df0 on branch: develop - PacMan|m|-(built on 2015-11-03T01:50:37.000)","branchName":"develop","buildDate":1446515437,"buildNumber":"4153","codeName":"PacMan|m|","hash":"c50ee04ec98886ed1f54d599355e04346bf50df0","releaseNumber":"1.7.0."},"description":"Version","status":"SUCCESS"}
-```
+      {"data":{"banner":"EvoStream Media Server (www.evostream.com) version 1.7.0. build 4153 with hash: c50ee04ec98886ed1f54d599355e04346bf50df0 on branch: develop - PacMan|m|-(built on 2015-11-03T01:50:37.000)","branchName":"develop","buildDate":1446515437,"buildNumber":"4153","codeName":"PacMan|m|","hash":"c50ee04ec98886ed1f54d599355e04346bf50df0","releaseNumber":"1.7.0."},"description":"Version","status":"SUCCESS"}
 
 - **JSON**
 
@@ -63,16 +57,14 @@ An example of a command request and response from an ASCLII CLI telnet session w
 
 **Response:**
 
-``` 
-Command entered successfully!
-Version
-
-  banner: EvoStream Media Server (www.evostream.com) version 1.7.0. build 4153 with hash: 4ab5d9145ae3b4b3dfeb3af5ce6890f015824974 on branch: develop - PacMan|m| - (built on 2015-11-06T08:24:32.000)
-  buildDate: 2015-11-03T01:50:37.000
-  buildNumber: 4153
-  codeName: PacMan|m|
-  releaseNumber: 1.7.0.
-```
+    Command entered successfully!
+    Version
+    
+    banner: EvoStream Media Server (www.evostream.com) version 1.7.0. build 4153 with hash: 4ab5d9145ae3b4b3dfeb3af5ce6890f015824974 on branch: develop - PacMan|m| - (built on 2015-11-06T08:24:32.000)
+    buildDate: 2015-11-03T01:50:37.000
+    buildNumber: 4153
+    codeName: PacMan|m|
+    releaseNumber: 1.7.0.
 
 ------
 
@@ -82,25 +74,17 @@ To access the API via the HTTP interface, simply make an HTTP request on the ser
 
 A general http format request would be the following:
 
-``` 
-http://[EMS IP]:7777/[API]
-```
+    http://[EMS IP]:7777/[API]
 
 An example of a command request and response from an HTTP session would be the following:
 
-``` 
-http://IP:7777/[API]?params=([base64 encoded parameters])
-```
-
-
+    http://IP:7777/[API]?params=([base64 encoded parameters])
 
 **Request:** `http://localhost:7777/version`
 
 **Response:**
 
-``` 
-{"data":{"banner":"EvoStream Media Server (www.evostream.com) version 1.7.0. build 4153 with hash: 4ab5d9145ae3b4b3dfeb3af5ce6890f015824974 on branch: develop - PacMan|m| - (built on 2015-11-06T08:24:32.000)","branchName":"develop","buildDate":"2015-11-06T08:24:32.000","buildNumber":"4176","codeName":"PacMan|m|","hash":"4ab5d9145ae3b4b3dfeb3af5ce6890f015824974","releaseNumber":"1.7.0."},"description":"Version","status":"SUCCESS"}
-```
+    {"data":{"banner":"EvoStream Media Server (www.evostream.com) version 1.7.0. build 4153 with hash: 4ab5d9145ae3b4b3dfeb3af5ce6890f015824974 on branch: develop - PacMan|m| - (built on 2015-11-06T08:24:32.000)","branchName":"develop","buildDate":"2015-11-06T08:24:32.000","buildNumber":"4176","codeName":"PacMan|m|","hash":"4ab5d9145ae3b4b3dfeb3af5ce6890f015824974","releaseNumber":"1.7.0."},"description":"Version","status":"SUCCESS"}
 
 
 
@@ -110,25 +94,18 @@ Sampling a `pullstream` command:
 
 1. Type in the parameters first:
    
-   ``` 
-   (firstParam=XXX secondParam=YYY…)
-   
-   (uri=rtsp://localhost:5544/vod/mp4.bunny.mp4 localStreamName=bunny)
-   ```
+       (firstParam=XXX secondParam=YYY…)
+       (uri=rtsp://localhost:5544/vod/mp4.bunny.mp4 localStreamName=bunny)
    
 2. Convert the parameters using a base64 encoder:
 
-**Converted parameter:** 
+   **Converted parameter:** 
 
-``` 
-dXJpPXJ0c3A6Ly9sb2NhbGhvc3Q6NTU0NC92b2QvbXA0LmJ1bm55Lm1wNCBsb2NhbHN0cmVhbW5hbWU9YnVubnkp
-```
+        dXJpPXJ0c3A6Ly9sb2NhbGhvc3Q6NTU0NC92b2QvbXA0LmJ1bm55Lm1wNCBsb2NhbHN0cmVhbW5hbWU9YnVubnkp
 
-**The corresponding request in HTTP format would be:**
+   **The corresponding request in HTTP format would be:**
 
-``` 
-http://localhost:7777/pullstream?params= dXJpPXJ0c3A6Ly9sb2NhbGhvc3Q6NTU0NC92b2QvbXA0LmJ1bm55Lm1wNCBsb2NhbHN0cmVhbW5hbWU9YnVubnkpxxxxxxxxxx 
-```
+        http://localhost:7777/pullstream?params=dXJpPXJ0c3A6Ly9sb2NhbGhvc3Q6NTU0NC92b2QvbXA0LmJ1bm55Lm1wNCBsb2NhbHN0cmVhbW5hbWU9YnVubnkp
 
 
 
