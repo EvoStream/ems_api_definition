@@ -21,6 +21,7 @@ This function has the following parameters:
 |      metaFolder       |   false   |   *(null)*    | Path to the folder which is going to contain all the seek\\/meta files. If missing, the seek/meta files are going to be generated inside the media folder |
 |         name          |   false   |    *null*     | Name given to this storage. Used to better identify the storage |
 |    seekGranularity    |   false   |    1.0000     | Sets the granularity for the seek files  |
+|  maxPlaylistFileSize  |           |               |                                          |
 
 ------
 

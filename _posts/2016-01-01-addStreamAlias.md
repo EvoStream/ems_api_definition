@@ -10,12 +10,14 @@ Allows you to create secondary name(s) for internal streams. Once an alias is cr
 
 ***Note:*** 	***`hasStreamAliases` in config.lua should be TRUE.***
 
+
+
 This function has the following parameters:
 
 | **Parameter Name** | **Mandatory** | **Default Value** | **Description**                          |
 | :----------------: | :-----------: | :---------------: | ---------------------------------------- |
 |  localStreamName   |     true      |      *null*       | The original stream name                 |
-|     aliasName      |     true      |      *null*       | The alias alternative to the localStreamName |
+|     aliasName      |     true      |      *null*       | The alias alternative to the `localStreamName` |
 |    expirePeriod    |     false     | *-600 (10 mins)*  | The expiration period for this alias. Negative values will be treated as one-shot but no longer than the absolute positive value in seconds, **0** means it will not expire, positive values mean the alias can be used multiple times but expires after this many seconds. The default is **-600** (one-shot, 10 mins) |
 
 An example of the addStreamAlias interface is:
@@ -24,7 +26,7 @@ An example of the addStreamAlias interface is:
 addStreamAlias localStreamName=bunny aliasName=video1 expirePeriod=-300
 ```
 
-Stream with bunny as localStreamName will have an alias of video1.
+Stream with bunny as `localStreamName` will have an alias of video1.
 
 ------
 
@@ -55,8 +57,8 @@ addStreamAlias localStreamName=MyStream aliasName=video1 expirePeriod=-300
 The JSON response contains the following details:
 
 - data – The data to parse
-  - aliasName – The alias alternative to the localStreamName
-  - expirePeriod – The expiration period for this alias
+  - aliasName – The alias alternative to the `localStreamName`
+  - expirePeriod – The expiration period for the alias
   - localStreamName – The original stream name
 
 

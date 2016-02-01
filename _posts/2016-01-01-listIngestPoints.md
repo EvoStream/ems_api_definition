@@ -39,8 +39,8 @@ The JSON response contains the following details:
 
 - data – The data to parse
   - Listof pairs:
-    - privateStreamName –The privateStreamName which was set.
-    - publicStreamName – The publicStreamName which was set
+    - privateStreamName –The private stream name which was set
+    - publicStreamName – The public stream name which was set
 - description – Describes the result of parsing/executing the command
 
 

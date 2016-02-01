@@ -14,17 +14,17 @@ This function has the following parameters:
 | :------------------: | :-----------: | :--------------------------------------: | ---------------------------------------- |
 |   localStreamNames   |     true      |                  *null*                  | The stream(s) that will be used as the input. This is a comma-delimited list of active stream names (local stream names) |
 |     targetFolder     |     true      |                  *null*                  | The folder where all the manifest and fragment files will be stored. This folder must be accessible by the DASH clients. It is usually in the web-root of the server |
-|      bandwidths      |     false     |                    0                     | The corresponding bandwidths for each stream listed in localStreamNames. Again, this can be a comma-delimited list |
-|      groupName       |     false     |       *dash\_group\_xxxx (random)*       | The name assigned to the DASH stream or group. If the localStreamNames parameter contains only one entry and groupName is not specified, groupName will have the value of the input stream name |
+|      bandwidths      |     false     |                    0                     | The corresponding bandwidths for each stream listed in `localStreamNames`. Again, this can be a comma-delimited list |
+|      groupName       |     false     |       *dash\_group\_xxxx (random)*       | The name assigned to the DASH stream or group. If the `localStreamNames` parameter contains only one entry and `groupName` is not specified, `groupName` will have the value of the input stream name |
 |     playlistType     |     false     |                appending                 | Either \`appending\` or \`rolling\`      |
 |    playlistLength    |     false     |                    10                    | The number of fragments before the server starts to overwrite the older fragments. Used only when playlistType is 'rolling'. Ignored otherwise |
 |     manifestName     |     false     |               manifest.mpd               | The manifest file name                   |
 |     chunkLength      |     false     |                    10                    | The length (in seconds) of fragments to be made |
-|      chunkOnIDR      |     false     |                 1 *true*                 | If 1 (true), chunking is performed ONLY on IDR. Otherwise, chunking is performed whenever chunk length is achieved |
-|      keepAlive       |     false     |                 1 *true*                 | If 1 (true), the EMS will attempt to reconnect to the stream source if the connection is severed |
-| overwriteDestination |     false     |                 1 *true*                 | If 1 (true), it will allow overwrite of destination files |
+|      chunkOnIDR      |     false     |                 1 *true*                 | If true, chunking is performed ONLY on IDR. Otherwise, chunking is performed whenever chunk length is achieved |
+|      keepAlive       |     false     |                 1 *true*                 | If true, the EMS will attempt to reconnect to the stream source if the connection is severed |
+| overwriteDestination |     false     |                 1 *true*                 | If true, it will allow overwrite of destination files |
 | staleRetentionCount  |     false     | *If not specified, it will have the value of playlistLength* | How many old files are kept besides the ones present in the current version of the playlist. Only applicable for rolling playlists |
-|  cleanupDestination  |     false     |                0 *false*                 | If 1 (true), all manifest and fragment files in the target folder will be removed before DASH creation is started |
+|  cleanupDestination  |     false     |                0 *false*                 | If true, all manifest and fragment files in the target folder will be removed before DASH creation is started |
 |    dynamicProfile    |     false     |                 *1 true*                 | Set this parameter to 1 (default) for a live DASH, otherwise set it to 0 for a VOD |
 
 An example of the createDASHStream interface is:
@@ -67,8 +67,6 @@ createDASHStream localstreamnames=testpullStream targetfolder=../evo-webroot gro
 
 **JSON Response:**
 
-
-
 ``` 
 {
 "data":{
@@ -106,10 +104,10 @@ The JSON response contains the following details:
   - dynamicProfile – Tells if the DASH stream is a live or VOD
   - groupName – The name of the target folder where DASH files will be created
   - keepAlive – If true, the stream will attempt to reconnect if the connection is severed
-  - localStreamNames – An array of local names for the streams.
-  - manifestName – The file name of the manifest file. If blank, defaults to ‘manifest’
+  - localStreamNames – An array of local names for the streams
+  - manifestName – The file name of the manifest file. If blank, defaults to **manifest**
   - overwriteDestination – If true, overwriting of destination files during DASH creation is allowed
-  - playlistLength – The number of fragments before the server starts to overwrite the older fragments. Useful only for \`rolling\` playlistType
+  - playlistLength – The number of fragments before the server starts to overwrite the older fragments. Useful only for \`rolling\` `playlistType`
   - playlistType – Either \`appending\` or \`rolling\`
   - staleRetentionCount – The number of old files kept besides the ones listed in the current version of the manifest. Only applicable to rolling playlist type
   - targetFolder – The folder where all the manifest and chunk files are stored

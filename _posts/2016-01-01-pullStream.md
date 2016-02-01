@@ -13,7 +13,7 @@ This function has the following parameters:
 |    Parameter Name     |                Mandatory                 |        Default Value        | Description                              |
 | :-------------------: | :--------------------------------------: | :-------------------------: | ---------------------------------------- |
 |          uri          |                   true                   |           *null*            | TheURI of the external stream. Can be RTMP, RTSP or unicast/multicast (d) mpegts |
-|       keepAlive       |                  false                   |          1 *true*           | If keepAlive is set to 1, the server will attempt to reestablish connection with astream source after a connection has been lost. The reconnect will be attemptedonce every second |
+|       keepAlive       |                  false                   |          1 *true*           | If `keepAlive` is set to 1, the server will attempt to reestablish connection with astream source after a connection has been lost. The reconnect will be attemptedonce every second |
 |    localStreamName    |                  false                   |         *computed*          | If provided, the stream will be given this name. Otherwise, a fallback techniqueis used to determine the stream name (based on the URI) |
 |       forceTcp        |                  false                   |          1 *true*           | If 1 and if the stream is RTSP, a TCP connection will be forced.  Otherwise the transport mechanism will benegotiated (UDP or TCP) |
 |         tcUrl         |                  false                   |    *zero-length string*     | When specified, this value will be used to set the TC URL in the initial RTMPconnect invoke |
@@ -31,7 +31,7 @@ This function has the following parameters:
 |       ppsBytes        | true if uri is RTP and isAudio is false, otherwise false |    *zero-length string*     | The video PPS bytes of this RTP stream if it is video. It should be base 64 encoded |
 |         ssmIp         |                  false                   |    *zero-length string*     | The source IP from source-specific-multicast. Only usable when doing UDP based pull |
 |       httpProxy       |                  false                   |    *zero-length string*     | This parameter has two valid values: **IP:Port** – This value combination specifies an RTSP HTTP Proxy from which the RTSP stream should be pulled from **Self** - Specifying “self” as the value implies pulling RTSP over HTTP |
-|    sendRenewStream    |                                          |                             |                                          |
+|    sendRenewStream    |                  false                   |          0 *false*          | If true, the server will send RenewStream via SET_PARAMETER when a new client connects. Only valid for RTSP URIs |
 
 The EMS provides several shorthand User Agent strings (not case-sensitive) for convenience:
 
@@ -128,18 +128,18 @@ The JSON response for pullStream contains the following details:
   - emulateUserAgent – This is the string that the EMS uses to identify itself with the other server.  It can be modified so that EMS identifies itself as, say, a Flash Media Server
   - forceTcp – Whether TCP MUST be used, or if UDP can be used
   - httpProxy - May either be IP:Port combination orself
-  - isAudio - Indicates if the currently pulledstream is an audio source
+  - isAudio - Indicates if the currently pulled stream is an audio source
   - keepAlive – If true, the stream will attempt to reconnect if the connection is severed
   - localStreamName – The local name for the stream
   - operationType – The type of operation
   - pageUrl – A link to the page that originated therequest (often unused)
   - ppsBytes - The video PPS bytes of this RTP stream if it is video
-  - rangeEnd - The length in seconds for theplayback
+  - rangeEnd - The length in seconds for the playback
   - rangeStart - A value from which the playback should start expressed in seconds
-  - rtcpDetectionInterval – Used for RTSP. This isthe time period the EMS waits to determine if an RTCP connection is available for the RTSP/RTP stream. (RTSP is used for synchronization between audio andvideo)
-  - sendRenewStream – If 1, the server will sendRenewStream via SET_PARAMETER when a new client connects
-  - spsBytes - The video SPS bytes of this RTPstream if it is video
-  - ssmIp - The source IP fromsource-specific-multicast
+  - rtcpDetectionInterval – Used for RTSP. This is the time period the EMS waits to determine if an RTCP connection is available for the RTSP/RTP stream. (RTSP is used for synchronization between audio and video)
+  - sendRenewStream – If 1, the server will `sendRenewStream` via SET_PARAMETER when a new client connects
+  - spsBytes - The video SPS bytes of this RTP stream if it is video
+  - ssmIp - The source IP from source-specific-multicast
   - swfUrl – The location of the Flash Client thatis generating the stream (if any)
   - tcUrl – An RTMP parameter that is essentially acopy of the URI
   - tos – Type of Service network flag
