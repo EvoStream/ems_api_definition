@@ -1,7 +1,7 @@
 ---
 layout: page
-title: About
-permalink: /about/
+title: Documentation Main Index
+permalink: /
 ---
 
 ### EvoStream Media Server
