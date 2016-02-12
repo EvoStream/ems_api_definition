@@ -3,7 +3,7 @@ layout: post
 title: shutdownServer
 date:   2016-01-01 00:00:00 +0000
 categories: jekyll update
-permalink: shutdown_server
+permalink: shutdownserver
 ---
 
 This function ends the server process, completely shutting down the EMS. This function must be called twice, once with a blank parameter, allowing you to obtain the shutdown key, and then a second time with the key, which actually causes the EMS to terminate.

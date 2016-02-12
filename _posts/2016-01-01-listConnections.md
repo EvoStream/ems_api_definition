@@ -3,7 +3,7 @@ layout: post
 title: listConnections
 date:   2016-01-01 00:00:00 +0000
 categories: jekyll update
-permalink: list_connections
+permalink: listconnections
 ---
 
 Returns details about every active stream-related connection. This does not include other connections used for EMS operations (telnet, license manager, interface, etc.).

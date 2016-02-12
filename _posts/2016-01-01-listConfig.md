@@ -3,7 +3,7 @@ layout: post
 title: listConfig
 date:   2016-01-01 00:00:00 +0000
 categories: jekyll update
-permalink: list_config
+permalink: listconfig
 ---
 
 Returns a list with all push/pull configurations.

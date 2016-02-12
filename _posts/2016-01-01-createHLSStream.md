@@ -3,7 +3,7 @@ layout: post
 title: createHLSStream
 date:   2016-01-01 00:00:00 +0000
 categories: jekyll update
-permalink: create_hls_stream
+permalink: createhlsstream
 ---
 
 Create an HTTP Live Stream (HLS) out of an existingH.264/AAC stream.  HLS is used to stream live feeds to iOS devices such as iPhones and iPads.  

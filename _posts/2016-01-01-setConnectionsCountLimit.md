@@ -3,7 +3,7 @@ layout: post
 title: setConnectionsCountLimit
 date:   2016-01-01 00:00:00 +0000
 categories: jekyll update
-permalink: set_connections_count_limit
+permalink: setconnectionscountlimit
 ---
 
 This interface sets a limit on the number of concurrent connections the EMS will allow.

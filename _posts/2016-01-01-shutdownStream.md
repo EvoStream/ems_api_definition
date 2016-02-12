@@ -3,7 +3,7 @@ layout: post
 title: shutdownStream
 date:   2016-01-01 00:00:00 +0000
 categories: jekyll update
-permalink: shutdown_stream
+permalink: shutdownstream
 ---
 
 Terminates a specific stream. When `permanently=1` is used, this command is analogous to `removeConfig`.

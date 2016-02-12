@@ -3,7 +3,7 @@ layout: post
 title: createDASHStream
 date:   2016-01-01 00:00:00 +0000
 categories: jekyll update
-permalink: create_dash_stream
+permalink: createdashstream
 ---
 
 Create Dynamic Adaptive Streaming over HTTP (DASH) out of an existing H.264/AAC stream. DASH was developed by the Moving Picture Experts Group (MPEG) to establish a standard for HTTP adaptive-bitrate streaming that would be accepted by multiple vendors and facilitate interoperability.

@@ -3,7 +3,7 @@ layout: post
 title: shutdownMetadata
 date:   2016-01-01 00:00:00 +0000
 categories: jekyll update
-permalink: shutdown_metadata
+permalink: shutdownmetadata
 ---
 
 Stops a metadata pseudo-stream. This command shuts down all multiple pull streams that were issued for a given localStreamName.

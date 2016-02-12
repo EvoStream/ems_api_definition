@@ -3,7 +3,7 @@ layout: post
 title: getConnectionsCount
 date:   2016-01-01 00:00:00 +0000
 categories: jekyll update
-permalink: get_connections_count
+permalink: getconnectionscount
 ---
 
 Returns the number of active connections.  This includes connections necessary for EMS operations (telnet, license manager, interface, etc.) and all connections opened by streams (RTSP-UDP-RTP ports).

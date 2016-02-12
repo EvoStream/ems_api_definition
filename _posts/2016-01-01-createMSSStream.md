@@ -3,7 +3,7 @@ layout: post
 title: createMSSStream
 date:   2016-01-01 00:00:00 +0000
 categories: jekyll update
-permalink: create_mss_stream
+permalink: createmssstream
 ---
 
 Create a Microsoft Smooth Stream (MSS) out of an existing H.264/AAC stream. Smooth Streaming was developed by Microsoft to compete with other adaptive streaming technologies.

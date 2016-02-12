@@ -3,7 +3,7 @@ layout: post
 title: removeTimer
 date:   2016-01-01 00:00:00 +0000
 categories: jekyll update
-permalink: remove_timer
+permalink: removetimer
 ---
 
 This function removes a previously armed timer.

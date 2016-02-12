@@ -3,7 +3,7 @@ layout: post
 title: createHDSStream
 date:   2016-01-01 00:00:00 +0000
 categories: jekyll update
-permalink: create_hds_stream
+permalink: createhdsstream
 ---
 
 Create an HDS (HTTP Dynamic Streaming) stream out of an existing H.264/AAC stream. HDS is used to stream standard MP4 media over regular HTTP connections. HDS is a new technology developed by Adobe in response to HLS from Apple.

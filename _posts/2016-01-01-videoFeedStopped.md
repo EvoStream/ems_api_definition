@@ -3,7 +3,7 @@ layout: post
 title: videoFeedStopped
 date:   2016-01-01 00:00:00 +0000
 categories: jekyll update
-permalink: video_feed_stopped
+permalink: videofeedstopped
 ---
 
 Event triggered when a video packet is lost

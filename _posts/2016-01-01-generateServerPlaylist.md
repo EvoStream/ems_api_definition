@@ -3,7 +3,7 @@ layout: post
 title: generateServerPlaylist
 date:   2016-01-01 00:00:00 +0000
 categories: jekyll update
-permalink: generate_server_playlist
+permalink: generateserverplaylist
 ---
 
 Will create a server-side playlist with the specified sources.

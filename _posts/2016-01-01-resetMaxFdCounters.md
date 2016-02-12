@@ -3,7 +3,7 @@ layout: post
 title: resetMaxFdCounters
 date:   2016-01-01 00:00:00 +0000
 categories: jekyll update
-permalink: reset_max_fd_counters
+permalink: resetmaxfdcounters
 ---
 
 Reset the maximum, or high-water-mark, from the Connection Counters

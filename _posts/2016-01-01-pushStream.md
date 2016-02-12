@@ -3,7 +3,7 @@ layout: post
 title: pushStream
 date:   2016-01-01 00:00:00 +0000
 categories: jekyll update
-permalink: push_stream
+permalink: pushstream
 ---
 
 This will try to push a local stream to an externaldestination. The pushed stream can only use the RTMP, RTSP or MPEG-TSunicast/multicast protocol. 
