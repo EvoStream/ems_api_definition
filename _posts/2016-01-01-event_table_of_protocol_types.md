@@ -30,6 +30,7 @@ permalink: event_table_of_protocol_types
 |                      |   OH4R   | Outbound HTTP for RTMP |
 |    CLI Protocols     | IJSONCLI | Inbound JSON CLI       |
 |                      |   H4C    | HTTP for CLI           |
+|                      | IASCCLI  | Inbound ASCII CLI      |
 |    RPC Protocols     |   IRPC   | Inbound RPC            |
 |                      |   ORPC   | Outbound RPC           |
 | Passthrough Protocol |    PT    | Passthrough            |
