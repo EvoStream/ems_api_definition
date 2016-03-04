@@ -14,24 +14,24 @@ This function has the following parameters:
 | :-------------------: | :--------------------------------------: | :-------------------------: | ---------------------------------------- |
 |          uri          |                   true                   |           *null*            | TheURI of the external stream. Can be RTMP, RTSP or unicast/multicast (d) mpegts |
 |       keepAlive       |                  false                   |          1 *true*           | If keepAlive is set to 1, the server will attempt to reestablish connection with astream source after a connection has been lost. The reconnect will be attemptedonce every second |
-|    localStreamName    |                  false                   |         *computed*          | If provided, the stream will be given this name. Otherwise, a fallback techniqueis used to determine the stream name (based on the URI) |
-|       forceTcp        |                  false                   |          1 *true*           | If 1 and if the stream is RTSP, a TCP connection will be forced.  Otherwise the transport mechanism will benegotiated (UDP or TCP) |
+|    localStreamName    |                  false                   |         *computed*          | If provided, the stream will be given this name. Otherwise, a fallback technique is used to determine the stream name (based on the URI) |
+|       forceTcp        |                  false                   |          1 *true*           | If 1 and if the stream is RTSP, a TCP connection will be forced.  Otherwise the transport mechanism will be negotiated (UDP or TCP) |
 |         tcUrl         |                  false                   |    *zero-length string*     | When specified, this value will be used to set the TC URL in the initial RTMPconnect invoke |
-|        pageUrl        |                  false                   |    *zero-length string*     | When specified, this value will be used to set the originating web page address inthe initial RTMP connect invoke |
-|        swfUrl         |                  false                   |    *zero-length string*     | When specified, this value will be used to set the originating swf URL in theinitial RTMP connect invoke |
-|      rangeStart       |                  false                   |             -2              | For RTSP and RTMP connections.  A value fromwhich the playback should start expressed in seconds. There are 2 specialvalues: -2 and -1. For more information, please read about start/len parameters here: [http://livedocs.adobe.com/flashmediaserver/3.0/hpdocs/help.html?content=00000185.html](http://livedocs.adobe.com/flashmediaserver/3.0/hpdocs/help.html?content=00000185.html) |
-|       rangeEnd        |                  false                   |             -1              | The length in seconds for the playback. -1 is a special value. For moreinformation, please read about start/len parameters here: [http://livedocs.adobe.com/flashmediaserver/3.0/hpdocs/help.html?content=00000185.html](http://livedocs.adobe.com/flashmediaserver/3.0/hpdocs/help.html?content=00000185.html) |
+|        pageUrl        |                  false                   |    *zero-length string*     | When specified, this value will be used to set the originating web page address in the initial RTMP connect invoke |
+|        swfUrl         |                  false                   |    *zero-length string*     | When specified, this value will be used to set the originating swf URL in the initial RTMP connect invoke |
+|      rangeStart       |                  false                   |             -2              | For RTSP and RTMP connections.  A value from which the playback should start expressed in seconds. There are 2 special values: -2 and -1. For more information, please read about start/len parameters here: [http://livedocs.adobe.com/flashmediaserver/3.0/hpdocs/help.html?content=00000185.html](http://livedocs.adobe.com/flashmediaserver/3.0/hpdocs/help.html?content=00000185.html) |
+|       rangeEnd        |                  false                   |             -1              | The length in seconds for the playback. -1 is a special value. For more information, please read about start/len parameters here: [http://livedocs.adobe.com/flashmediaserver/3.0/hpdocs/help.html?content=00000185.html](http://livedocs.adobe.com/flashmediaserver/3.0/hpdocs/help.html?content=00000185.html) |
 |          ttl          |                  false                   | *operating system supplied* | Sets the IP_TTL (time to live) option on the socket |
 |          tos          |                  false                   | *operating system supplied* | Sets the IP_TOS (Type of Service) option on the socket |
 | rtcpDetectionInterval |                  false                   |             10              | How much time (in seconds) should the server wait for RTCP packets before declaring the RTSP stream as a RTCP-less stream |
 |   emulateUserAgent    |                  false                   |     *EvoStream message*     | When specified, this value will be used as the user agent string. It is meaningful only for RTMP |
-|        isAudio        |    trueif uri is RTP, otherwise false    |          1 *true*           | If 1 and if the stream is RTP, it indicates that the currently pulled stream is anaudio source. Otherwise the pulled source is assumed as a video source |
+|        isAudio        |    trueif uri is RTP, otherwise false    |          1 *true*           | If 1 and if the stream is RTP, it indicates that the currently pulled stream is an audio source. Otherwise the pulled source is assumed as a video source |
 |    audioCodecBytes    | true if uri is RTP and isAudio is true, otherwise false |    *zero-length string*     | The audio  codec setup of this RTP stream if it is audio. Represented as hex format  without '0x' or 'h'. *For example:  audioCodecBytes=1190* |
 |       spsBytes        | true if uri is RTP and isAudio is false, otherwise false |    *zero-length string*     | The video SPS  bytes of this RTP stream if it is video. It should be base 64 encoded. |
 |       ppsBytes        | true if uri is RTP and isAudio is false, otherwise false |    *zero-length string*     | The video PPS bytes of this RTP stream if it is video. It should be base 64 encoded |
 |         ssmIp         |                  false                   |    *zero-length string*     | The source IP from source-specific-multicast. Only usable when doing UDP based pull |
 |       httpProxy       |                  false                   |    *zero-length string*     | This parameter has two valid values: **IP:Port** – This value combination specifies an RTSP HTTP Proxy from which the RTSP stream should be pulled from **Self** - Specifying “self” as the value implies pulling RTSP over HTTP |
-|    sendRenewStream    |                                          |                             |                                          |
+|    sendRenewStream    |                  false                   |          0 *false*           |If true, the server will sendRenewStream via SET_PARAMETER when a new client connects. Only valid for RTSP URIs|
 
 The EMS provides several shorthand User Agent strings (not case-sensitive) for convenience:
 
@@ -46,7 +46,7 @@ An example of the pullStream interface is:
 
 `pullStream uri=rtsp://AddressOfStream keepAlive=1 localStreamname=RTSPteststream`
 
-`pullStream uri=rtmp://AddressOfStream keepAlive=1localStreamname=RTMPteststream`
+`pullStream uri=rtmp://AddressOfStream keepAlive=1 localStreamname=RTMPteststream`
 
 
 
@@ -125,23 +125,23 @@ The JSON response for pullStream contains the following details:
 - data – The data to parse
   - audioCodecBytes - The audio codec setup of thisRTP stream if it is audio
   - configID – The configuration ID for this command
-  - emulateUserAgent – This is the string that the EMS uses to identify itself with the other server.  It can be modified so that EMS identifies itself as, say, a Flash Media Server
+  - emulateUserAgent – This is the string that the EMS uses to identify itself with the other server. It can be modified so that EMS identifies itself as, say, a Flash Media Server
   - forceTcp – Whether TCP MUST be used, or if UDP can be used
   - httpProxy - May either be IP:Port combination orself
-  - isAudio - Indicates if the currently pulledstream is an audio source
+  - isAudio - Indicates if the currently pulled stream is an audio source
   - keepAlive – If true, the stream will attempt to reconnect if the connection is severed
   - localStreamName – The local name for the stream
   - operationType – The type of operation
-  - pageUrl – A link to the page that originated therequest (often unused)
+  - pageUrl – A link to the page that originated the request (often unused)
   - ppsBytes - The video PPS bytes of this RTP stream if it is video
-  - rangeEnd - The length in seconds for theplayback
+  - rangeEnd - The length in seconds for the playback
   - rangeStart - A value from which the playback should start expressed in seconds
-  - rtcpDetectionInterval – Used for RTSP. This isthe time period the EMS waits to determine if an RTCP connection is available for the RTSP/RTP stream. (RTSP is used for synchronization between audio andvideo)
+  - rtcpDetectionInterval – Used for RTSP. This is the time period the EMS waits to determine if an RTCP connection is available for the RTSP/RTP stream. (RTSP is used for synchronization between audio andvideo)
   - sendRenewStream – If 1, the server will sendRenewStream via SET_PARAMETER when a new client connects
   - spsBytes - The video SPS bytes of this RTPstream if it is video
-  - ssmIp - The source IP fromsource-specific-multicast
-  - swfUrl – The location of the Flash Client thatis generating the stream (if any)
-  - tcUrl – An RTMP parameter that is essentially acopy of the URI
+  - ssmIp - The source IP from source-specific-multicast
+  - swfUrl – The location of the Flash Client that is generating the stream (if any)
+  - tcUrl – An RTMP parameter that is essentially a copy of the URI
   - tos – Type of Service network flag
   - ttl – Time To Live network flag
   - uri – Contains key/value pairs describing thesource stream’s URI
@@ -150,16 +150,16 @@ The JSON response for pullStream contains the following details:
     - documentWithFullParameters – The document name with parameters of the source stream
     - fullDocumentPath - The document path of the destination stream
     - fullDocumentPathWithParameters - The document path with parameters of the destination stream
-    - fullParameters – The parameters for the sourcestream’s URI
+    - fullParameters – The parameters for the source stream’s URI
     - fullUri – The full URI of the source stream
-    - fullUriWithAuth – The full URI with authenticationof the source stream
+    - fullUriWithAuth – The full URI with authentication of the source stream
     - host – Name of the source stream’s host
     - ip – IP address of the source stream’s host
-    - originalUri – The source stream’s URI where itwas generated
-    - parameters – Parameters for the source stream’sURI (if any)
+    - originalUri – The source stream’s URI where it was generated
+    - parameters – Parameters for the source stream’s URI (if any)
     - password – Password for authenticating the source stream (if required)
     - port – Port used by the source stream
-    - portSpecified – True if the port for the sourcestream is specified
+    - portSpecified – True if the port for the source stream is specified
     - scheme – The protocol used by the source stream
     - userName – The user name for authenticating the source stream (if required)
 
