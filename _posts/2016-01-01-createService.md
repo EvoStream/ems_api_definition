@@ -70,5 +70,5 @@ The JSON response contains the following details:
   - ip = The IP address bound to the service
   - port – The port bound to the service
   - protocol – The protocol bound to the service
-- description – Describes the result of parsing/executing the command.
-- status – `SUCCESS` if the command was parsed and executed successfully, `FAIL` if not.
+- description – Describes the result of parsing/executing the command
+- status – `SUCCESS` if the command was parsed and executed successfully, `FAIL` if not

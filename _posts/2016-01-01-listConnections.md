@@ -8,9 +8,11 @@ permalink: listconnections
 
 Returns details about every active stream-related connection. This does not include other connections used for EMS operations (telnet, license manager, interface, etc.).
 
+This function has the following parameters:
+
 |     **Parameter Name**     | **Mandatory** | **Default Value** | **Description**                          |
 | :------------------------: | :-----------: | :---------------: | ---------------------------------------- |
-| excludeNonNetworkProtocols |     false     |     1 *true*      | If 1 (true), all non-networking protocols will be excluded. If 0 (false), non-networking protocols will be included |
+| excludeNonNetworkProtocols |     false     |     1 *true*      | If true, all non-networking protocols will be excluded. If false, non-networking protocols will be included |
 
 An example of the listConnections interface is:
 
@@ -82,7 +84,7 @@ The JSON response contains the following details about each connection:
     - tx – Total bytes transferred on this connection
     - type – The connection type (TCP, UDP)
   - pullSettings/pushSettings/hlsSettings/hdsSettings/mssSettings/dashSettings/recordSettings – A copy of the parameters used in the stream command that caused this connection to be made
-    - Other fields present depend on the stream type (see **pushStream**, **pullStream**, **createHLSStream**, **createHDSStream, createMSSStream, createDASHStream, record** commands)
+    - Other fields present depend on the stream type (see **`pushStream`**, **`pullStream`**, **`createHLSStream`**, **`createHDSStream`, `createMSSStream`, `createDASHStream`, `record`** commands)
   - stack – details about what internal resources are using the connection
     - applicationID – the ID of the internal application using the connection
     - creationTimestamp – The time (in UNIX seconds) when the application started using the connection
@@ -90,7 +92,7 @@ The JSON response contains the following details about each connection:
     - isEnqueueForDelete – Internal flag used for cleanup
     - queryTimestamp – The time (in UNIX seconds) when this data was populated
     - rxInvokes – Number of received RTMP function invokes
-    - streams – Details about the streams that are using the connection (see fields in ListStreams)
+    - streams – Details about the streams that are using the connection (see fields in `listStreams`)
     - txInvokes – Number of sent RTMP function invokes
     - type – A descriptor for how the application is using the connection
 

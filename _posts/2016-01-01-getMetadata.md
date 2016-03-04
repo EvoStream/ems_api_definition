@@ -55,14 +55,14 @@ getMetadata localStreamName=bunny noWrap=1
 "EMS":{
     "type":"json",
     "timestamp":12042
-},
+	},
 "data":{
     "lat":"32.809668",
     "lon":"-117.2 55317",
     "alt":"44.7",
     "speed":"50",
     "dir":"300"
-}
+	}
 }
 ```
 
@@ -70,13 +70,13 @@ getMetadata localStreamName=bunny noWrap=1
 
 The JSON response contains the following details:
 
-- data – The data to parse.
+- data – The data to parse
   - type - 
   - timestamp - 
   - lat - 
-  - lon - 
+  - lon -  
   - alt - 
   - speed - 
-  - dir - 
+  - dir -
 - description – Describes the result of parsing/executing the command
 - status – `SUCCESS` if the command was parsed and executed successfully, `FAIL` if not

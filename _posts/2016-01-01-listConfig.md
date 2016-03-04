@@ -47,21 +47,20 @@ listConfig
 The JSON response contains the following details about the pull/push configuration:
 
 - data – The data to parse
-  
-  - hds (see fields of **createHDSStream** command)
-  - hls (see fields of **createHLSStream** command)
-  - mss (see fields of **createMSSStream** command)
-  - dash (see fields of **createDASHStream** command)
-  - pull (see fields of **pullStream** command)
-  - push (see fields of **pushStream** command)
-  - record (see fields of **record** command)
+  - hds (see fields of **`createHDSStream`** command)
+  - hls (see fields of **`createHLSStream`** command)
+  - mss (see fields of **`createMSSStream`** command)
+  - dash (see fields of **`createDASHStream`** command)
+  - pull (see fields of **`pullStream`** command)
+  - push (see fields of **`pushStream`** command)
+  - record (see fields of **`record`** command)
     - status (within the stream types shown above) – array of current and previous states
-  
-  
-  - current/previous
-    - code – An integer representing the state of the stream.
-    - description – Describes the state of the stream.
-    - timestamp – The time (in Unix secs) the state was updated.
+
+
+- current/previous
+  - code – An integer representing the state of the stream.
+  - description – Describes the state of the stream.
+  - timestamp – The time (in Unix secs) the state was updated.
 
 
 - description – Describes the result of parsing/executing the command.

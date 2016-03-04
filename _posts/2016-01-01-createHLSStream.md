@@ -18,22 +18,25 @@ This function has the following parameters:
 | overwriteDestination |   false   |                 1 *true*                 | If true, it will force overwrite of destination files |
 | staleRetentionCount  |   false   | *if not specified, it will have the value of playlistLength* | The number of old files kept besides the ones listed in the current version of the playlist. Only applicable for rolling playlists |
 | createMasterPlaylist |   false   |                 1 *true*                 | If true, a master playlist will be created |
-| cleanupDestination  |   false   |                0 *false*                 | If 1 (true), all *.ts and *.m3u8 files in the target folder will be removed beforeHLS creation is started |
-|      bandwidths      |   false   |                    0                     | The corresponding bandwidths for each stream listed in localStreamNames. Again, this can be a comma-delimited list |
-|      groupName       |   false   | *it will be a random name in the form of hls_group_xxxx* | The name assigned to the HLS stream or group. If the localStreamNames parametercontains only one entry and groupName is not specified, groupName will have the value of the input stream name |
+| cleanupDestination  |   false   |                0 *false*                 | If  true, all *.ts and *.m3u8 files in the target folder will be removed before HLS creation is started |
+|      bandwidths      |   false   |                    0                     | The corresponding bandwidths for each stream listed in `localStreamNames`. Again, this can be a comma-delimited list |
+|      groupName       |   false   | *it will be a random name in the form of hls_group_xxxx* | The name assigned to the HLS stream or group. If the `localStreamNames` parameter contains only one entry and `groupName` is not specified, `groupName` will have the value of the input stream name |
 |     playlistType     |   false   |                appending                 | Either appending or rolling              |
 |    playlistLength    |   false   |                    10                    | The length (number of elements) of the playlist. Used only when playlistType is **rolling**. Ignored otherwise |
 |     playlistName     |   false   |              playlist.m3u8               | The file name ofthe playlist (*.m3u8)    |
 |     chunkLength      |   false   |                    10                    | The length (in seconds) of each playlist element (*.ts file). Minimum value is 1 (second) |
-|    maxChunkLength    |   false   |                    0                     | This parameter represents the maximum length, in seconds, the EMS will allow anysingle chunk to be. This is primarily in the case of chunkOnIDR=true where the EMS will wait for the next key-frame. If the maxChunkLength is less than chunkLength, the parameter shall be ignored |
+|    maxChunkLength    |   false   |                    0                     | This parameter represents the maximum length, in seconds, the EMS will allow anysingle chunk to be. This is primarily in the case of `chunkOnIDR=true` where the EMS will wait for the next key-frame. If the `maxChunkLength` is less than `chunkLength`, the parameter shall be ignored |
 |    chunkBaseName     |   false   |                 segment                  | The base name used to generate the *.ts chunks |
 |      chunkOnIDR      |   false   |                 1 *true*                 | If true, chunking is performed ONLY on IDR. Otherwise, chunking is performed whenever chunk length is achieved |
-|       drmType        |   false   |                   none                   | Sets the type ofDRM encryption to use.  Options are: **none** (no encryption), **evo** (AES Encryption), **verimatrix** (Verimatrix DRM). For Verimatrix DRM, the “drm” section of the config.lua file must be active andproperly configured. |
+|       drmType        |   false   |                   none                   | Sets the type ofDRM encryption to use.  Options are: **none** (no encryption), **evo** (AES Encryption), **verimatrix** (Verimatrix DRM). For Verimatrix DRM, the “drm” section of the config.lua file must be active and properly configured, **SAMPLE-AES** ( |
 |     AESKeyCount      |   false   |                    5                     | Specifies the number of keys that will be automatically generated and rotated over while encrypting this HLS stream |
 |      audioOnly       |   false   |                0 *false*                 | Specifies if the resulting stream will be audio only. A value of 1(true) will result in a stream without video |
-|      hlsResume       |   false   |                0 *false*                 | If 1 (true), HLS will resume in appending segments to previously created childplaylist even in cases of EMS shutdown or cut off stream source |
-|     useByteRange     |   false   |                                          |                                          |
-|      fileLength      |   false   |                                          |                                          |
+|      hlsResume       |   false   |                0 *false*                 | If true, HLS will resume in appending segments to previously created childplaylist even in cases of EMS shutdown or cut off stream source |
+|     useByteRange     |   false   |                0 *false*                 | If true, will use the EXT-X-BYTERANGE feature of HLS (version 4 and up) |
+|      fileLength      |   false   |                0 *false*                 | When using `useByteRange=1`, this parameter needs to be set too. This will be the size of file before chunking it to another file, this replace the `chunkLength` in case of EXT-X-BYTERANGE, since `chunkLength` will be the byte range chunk |
+|    useSystemTime     |   false   |                0 *false*                 | If true, uses UTC in playlist time stamp otherwise will use the local server time |
+|      offsetTime      |   false   |                    0                     |                                          |
+|     startOffset      |   false   |                    0                     | A parameter valid only for HLS v.6 onwards. This will indicate the start offset time (in seconds) for the playback of the playlist |
 
 An example of the createHLSStream interface is:
 
@@ -114,7 +117,7 @@ The JSON response for pullStream contains the following details:
   - configIDs – The configuration IDs for this command
   - createMasterPlaylist–If true, a master playlist is created
   - drmType - The type of DRM encryption used
-  - fileLength - 
+  - fileLength - The size of file before chunking it to another file, this replace the `chunkLength` in case of EXT-X-BYTERANGE
   - groupName –  The name of the target folder where HLS fileswill be created
   - hlsResume – If true, will resume in appendingsegments to previously created child playlist even in cases of EMS shutdown or cut off stream source
   - hlsVersion – The configured HLS version
@@ -123,17 +126,17 @@ The JSON response for pullStream contains the following details:
   - maxChunkLength - The maximum length the EMS willallow any single chunk to be
   - offsetTime - 
   - overwriteDestination –  If true, forced overwrite was enabled during HLS creation
-  - playlistLength – The number of elementsin the playlist. Useful only for rolling playlistType
+  - playlistLength – The number of elements in the playlist. Useful only for rolling playlistType
   - playlistName– The file name of the playlist (*.m3u8)
   - playlistType – Either appending or rolling
   - staleRetentionCount – The number of old files kept besides the ones listed in the current version of the playlist. Only applicable for rolling playlists
-  - startoffset - 
+  - startOffset - Indicate the start offset time (in seconds) for the playback of the playlist
   - targetFolder–The folder where all the .ts /.m3u8 files are stored
-  - useByteRange - 
-  - useSystemTime -
+  - useByteRange - Enables the use the EXT-X-BYTERANGE feature of HLS (version 4 and up)
+  - useSystemTime - Determine what time stamp is used in playlist
 
 
-- description– Describes the result of parsing/executing the command.
+- description– Describes the result of parsing/executing the command
 
 
 - status– `SUCCESS` if the command was parsed and executed successfully, `FAIL` if not

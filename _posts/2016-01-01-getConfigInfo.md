@@ -10,7 +10,7 @@ Returns the information of the stream by the configId.
 
 | **Parameter Name** | **Mandatory** | **Default Value** | **Description**                          |
 | :----------------: | :-----------: | :---------------: | ---------------------------------------- |
-|         id         |     true      |      *null*       | The configId of the configuration to get some information |
+|         id         |     true      |      *null*       | The `configId` of the configuration to get some information |
 
 ------
 
@@ -78,3 +78,10 @@ getConfigInfo id=1
 "status":"SUCCESS"
 }
 ```
+
+------
+
+The JSON response for pullStream contains the following details:
+
+- data – The information about the configuration
+

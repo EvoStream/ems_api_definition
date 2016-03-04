@@ -8,7 +8,9 @@ permalink: addgroupnamealias
 
 This command creates secondary name(s) for group names. Once an alias is created the group name cannot be used to request HTTP playback of that stream. Once an alias is used (requested by a client) the alias is removed. Aliases are designed to be used to protect/hide your source streams.
 
-***Note:	`hasGroupNameAliases` in webconfig.lua should be TRUE.***
+**Note:**	`hasGroupNameAliases` in webconfig.lua should be TRUE.
+
+
 
 This function has the following parameters:
 
@@ -62,14 +64,14 @@ The JSON response contains the following details:
 - data – Provides the following information for the added group name alias
   
   - aliasName – The alias alternative to be added for the group name
-  - cliProtocolId – For internal use
+  - cliProtocolId – For internal use only
   - edges – the process IDs and stream IDs for all edge instances
   - edgesCount – The number of edge instances
   - groupName – The original group name
-  - lastUpdate – Timestamp
+  - lastUpdate – For internal use only
   - operation – The command executed
-  - result – `true` if the operation succeeded, `false`' if not
-  - uniqueRequestId – For internal use
+  - result – `true` if the operation succeeded, `false` if not
+  - uniqueRequestId – For internal use only
   
 - description – Describes the result of parsing/executing the command
   

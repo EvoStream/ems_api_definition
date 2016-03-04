@@ -6,15 +6,17 @@ categories: jekyll update
 permalink: launchprocess
 ---
 
-Allows the user to launch an external process on the local machine. This can be used to do transcoding when paired with applications such as LibAVConv and FFMPEG. This function has the following parameters:
+Allows the user to launch an external process on the local machine. This can be used to do transcoding when paired with applications such as LibAVConv and FFMPEG. 
 
-|     **Parameter Name**     | **Mandatory** |  **Default Value**   | **Description**                          |
-| :------------------------: | :-----------: | :------------------: | ---------------------------------------- |
-|       fullBinaryPath       |     true      |        *null*        | The path to the executable               |
-|         keepAlive          |     false     |       *1 true*       | If the process dies for any reason, the EMS will restart the external application when keepAlive is 1 |
-|         arguments          |     false     | *zero-length string* | Complete list of arguments that need to be passed to the process, delimited by ESCAPED SPACES (“\\ “) |
-|         groupName          |               |                      |                                          |
-| $&lt;ENV&gt;=&lt;VALUE&gt; |     false     | *zero-length string* | Any number of environment variables that need to be set just before launching the process |
+This function has the following parameters:
+
+| **Parameter Name** | **Mandatory** |            **Default Value**             | **Description**                          |
+| :----------------: | :-----------: | :--------------------------------------: | ---------------------------------------- |
+|   fullBinaryPath   |     true      |                  *null*                  | The path to the executable               |
+|     keepAlive      |     false     |                 *1 true*                 | If the process dies for any reason, the EMS will restart the external application when `keepAlive` is 1 |
+|     arguments      |     false     |           *zero-length string*           | Complete list of arguments that need to be passed to the process, delimited by ESCAPED SPACES (“\\ “) |
+|     groupName      |     false     | *if not assigned, will create a random value process_group_xxx* | The group name assigned to the process   |
+|   $[ENV]=VALUE]    |     false     |           *zero-length string*           | Any number of environment variables that need to be set just before launching the process |
 
 An example of the launchProcess command is:
 
@@ -35,7 +37,7 @@ The final parameter is an example for setting an environment variable (SAMPLE\_E
 **API Call:**
 
 ``` 
-API	launchProcess fullBinaryPath=/home/ems/ffmpeg_preset.sh arguments=10fps\ Stream1\ Stream1_10fps keepAlive=1 $SAMPLE_E_VAR=MyVal
+launchProcess fullBinaryPath=/home/ems/ffmpeg_preset.sh arguments=10fps\ Stream1\ Stream1_10fps keepAlive=1 $SAMPLE_E_VAR=MyVal
 ```
 
 **JSON Response:**
@@ -61,10 +63,10 @@ The JSON response contains the following details:
   - arguments – Complete list of arguments that need to be passed to the process
   - configID – The configuration ID for this command
   - fullBinaryPath – Full path to the binary that needs to be launched
-  - groupName - ??
-  - keepAlive – If keepAlive is set to 1, the server will restart the process if it exits
+  - groupName - The group name assigned to the process
+  - keepAlive – If `keepAlive` is set to 1, the server will restart the process if it exits
   - operationType – The type of operation
-  - $<ENV>=<VALUE> – Any number of environment variables that need to be set just before launching the process
+  - $[ENV]=[VALUE] – Any number of environment variables that need to be set just before launching the process
 - description – Describes the result of parsing/executing the command
 
 

@@ -6,17 +6,17 @@ categories: jekyll update
 permalink: pushstream
 ---
 
-This will try to push a local stream to an externaldestination. The pushed stream can only use the RTMP, RTSP or MPEG-TSunicast/multicast protocol. 
+This will try to push a local stream to an external destination. The pushed stream can only use the RTMP, RTSP or MPEG-TS unicast/multicast protocol. 
 
 This function has the following parameters:
 
 |     Parameter Name     | Mandatory |        Default Value        | Description                              |
 | :--------------------: | :-------: | :-------------------------: | ---------------------------------------- |
 |          uri           |   true    |           *null*            | TheURI of the external stream. Can be RTMP, RTSP or unicast/multicast (d) mpegts |
-|       keepAlive        |   false   |          1 *true*           | If keepAlive is set to 1, the server will attempt to reestablish connection with astream source after a connection has been lost. The reconnect will be attemptedonce every second |
+|       keepAlive        |   false   |          1 *true*           | If `keepAlive` is set to 1, the server will attempt to reestablish connection with a stream source after a connection has been lost. The reconnect will be attempted once every second |
 |    localStreamName     |   false   |         *computed*          | If provided, the stream will be given this name. Otherwise, a fallback techniqueis used to determine the stream name (based on the URI) |
 |    targetStreamName    |   false   |           *null*            | The name of the stream at destination. If not provided, the target stream name willbe the same as the local stream name |
-|    targetStreamType    |   false   |            live             | It can be one of following: live, record, append. It is meaningful only for RTMP |
+|    targetStreamType    |   false   |            live             | It can be one of following: **live**, **record**, **append**. It is meaningful only for RTMP |
 |         tcUrl          |   false   |    *zero-length string*     | When specified, this value will be used to set the TC URL in the initial RTMPconnect invoke |
 |        pageUrl         |   false   |    *zero-length string*     | When specified, this value will be used to set the originating web page address inthe initial RTMP connect invoke |
 |         swfUrl         |   false   |    *zero-length string*     | When specified, this value will be used to set the originating swf URL in theinitial RTMP connect invoke |
@@ -24,8 +24,8 @@ This function has the following parameters:
 |          tos           |   false   | *operating system supplied* | Sets the IP_TOS (Type of Service) option on the socket |
 |    emulateUserAgent    |   false   |     *EvoStream message*     | When specified, this value will be used as the user agent string. It is meaningful only for RTMP |
 | rtmpAbsoluteTimestamps |   false   |          0 *false*          | Forces the timestamps to be absolute when using RTMP |
-|  sendChunkSizeRequest  |   false   |          1 *true*           | Sets whether the RTMP stream will or will not send a “Set Chunk Length” message.  This is significant whenpushing to Akamai’s new RTMP HD ingest point where this parameter should be setto 0 so that Akamai will not drop the connection |
-|      useSourcePts      |   false   |          0 *false*          | When value is 1 (true), timestamps on source inbound RTMP stream are passed directlyto the outbound (pushed) RTMP streams. This affects only pushed Outbound Net RTMP with net RTMP source.  This parameter overrides the value of theconfig.lua option of the same name |
+|  sendChunkSizeRequest  |   false   |          1 *true*           | Sets whether the RTMP stream will or will not send a “Set Chunk Length” message.  This is significant when pushing to Akamai’s new RTMP HD ingest point where this parameter should be set to 0 so that Akamai will not drop the connection |
+|      useSourcePts      |   false   |          0 *false*          | When value is true, timestamps on source inbound RTMP stream are passed directlyto the outbound (pushed) RTMP streams. This affects only pushed Outbound Net RTMP with net RTMP source.  This parameter overrides the value of the config.lua option of the same name |
 
 The EMS provides several shorthand User Agent strings (not case-sensitive) for convenience:
 

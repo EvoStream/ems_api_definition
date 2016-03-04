@@ -69,7 +69,7 @@ getExtendedConnectionCounters
 
 The JSON response contains the following details:
 
-- data – The data to parse.
+- data – The data to parse
   - origin
     - grandTotal – Stats for all connections
     - managedNonTcpUdp – Stats for non-TCP/UDP connections

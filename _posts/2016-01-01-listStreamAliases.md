@@ -22,10 +22,6 @@ listStreamAliases
 
 **JSON Response:**
 
-| API           | listStreamAliases |
-| ------------- | ----------------- |
-| JSON Response | {                 |
-
 ``` 
 {
 "data":[
@@ -43,14 +39,16 @@ listStreamAliases
 }
 ```
 
+------
+
 The JSON response contains the following details.
 
-- data – Contains an array of pairs of aliasName and localStreamName
-  - aliasName – The alias alternative to the localStreamName
-  - creationTime – ??
-  - expirePeriod - ??
+- data – Contains an array of pairs of `aliasName` and `localStreamName`
+  - aliasName – The alias alternative to the `localStreamName`
+  - creationTime – The time the alias is created
+  - expirePeriod - The expiration period of the alias
   - localStreamName – The original stream name
-  - oneShot -
-  - permanent -
+  - oneShot - Determines if the alias can only be used once
+  - permanent - Determines if the alias is for permanent use (unless EMS is restarted)
 - description – Describes the result of parsing/executing the command
 - status – `SUCCESS` if the command was parsed and executed successfully, `FAIL` if not
