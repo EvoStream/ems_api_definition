@@ -6,7 +6,7 @@ categories: jekyll update
 permalink: uploadmedia
 ---
 
-Creates an acceptor which receives an HTTP POST binary upload. The acceptor will be opened on a specified port and the uploaded media file will be written on a specified directory. The acceptor then waits for an HTTP PUT from a client with the media file as payload. The media file is then written on the specified location in the server.
+Creates an acceptor which receives an HTTP POST binary upload. The acceptor will be opened on a specified port and the uploaded media file will be written on a specified directory. The acceptor then waits for an HTTP POST from a client with the media file as payload. The media file is then written on the specified location in the server.
 
 This function has the following parameters:
 
