@@ -32,11 +32,6 @@ This function has the following parameters:
 
 An example of the createMSSStream interface is:
 
-To playback the created MSS stream, use a Smooth Streaming player such as one of the following:
-
-- [*http://smf.cloudapp.net/healthmonitor*](http://smf.cloudapp.net/healthmonitor)
-- [*http://playready.directtaps.net/pr/doc/slee/*](http://playready.directtaps.net/pr/doc/slee/)
-
 Enter the following stream URL: `http://My_IP_or_Domain/group1/manifest`
 
 In other words: `http://my_web_server/MSS_group_name/manifest_file_name`
@@ -105,7 +100,7 @@ The JSON response contains the following details:
 
 
 - description – Describes the result of parsing/executing the command
-  
+
 - status – `SUCCESS` if the command was parsed and executed successfully, `FAIL` if not
-  
+
   ​
