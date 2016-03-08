@@ -6,13 +6,15 @@ categories: jekyll update
 permalink: pullstream
 ---
 
-This will try to pull in a stream from an external source. Once a stream has been successfully pulled it is assigned a “local stream name” which can be used to access the stream from the EMS.
+This will try to pull in a stream from an external source. Once a stream has been successfully pulled it is assigned a “local stream name” which can be used to access the stream from the EMS.
+
+**Note:** When you want to record the content of your pulled stream using record, createHlsStream, or commands similar to these, it is advisable to call the recording command first before issuing the pullStream command. The rationale for this is because the pulled stream will already be running in the background once pulled. This may become the reason for missing some of the stream's content if it is already running beforehand, and the recording configuration has not started up yet.
 
 This function has the following parameters:
 
 |    Parameter Name     |                Mandatory                 |        Default Value        | Description                              |
 | :-------------------: | :--------------------------------------: | :-------------------------: | ---------------------------------------- |
-|          uri          |                   true                   |           *null*            | TheURI of the external stream. Can be RTMP, RTSP or unicast/multicast (d) mpegts |
+|          uri          |                   true                   |           *null*            | The URI of the external stream. Can be RTMP, RTSP or unicast/multicast (d) mpegts |
 |       keepAlive       |                  false                   |          1 *true*           | If `keepAlive` is set to 1, the server will attempt to reestablish connection with astream source after a connection has been lost. The reconnect will be attemptedonce every second |
 |    localStreamName    |                  false                   |         *computed*          | If provided, the stream will be given this name. Otherwise, a fallback techniqueis used to determine the stream name (based on the URI) |
 |       forceTcp        |                  false                   |          1 *true*           | If 1 and if the stream is RTSP, a TCP connection will be forced.  Otherwise the transport mechanism will benegotiated (UDP or TCP) |
