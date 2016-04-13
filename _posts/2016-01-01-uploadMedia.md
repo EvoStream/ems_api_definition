@@ -23,12 +23,6 @@ The sending client must conform to the following:
 - Content-type must be set to *video/mp4* or *application/octet-stream*
 - Content-length must be used. This function is intended for uploading VOD MP4 so the EMS will expect that the size of the file is already known
 
-An example of the uploadMedia interface is:
-
-``` 
-uploadMedia port=3333 targetFolder=/MyMediaFolder
-```
-
 ------
 
 **Example:**
@@ -36,7 +30,7 @@ uploadMedia port=3333 targetFolder=/MyMediaFolder
 **API Call:**
 
 ``` 
-shutdownstream id=55
+uploadMedia port=3333 targetFolder=/MyMediaFolder
 ```
 
 **JSON Response:**
