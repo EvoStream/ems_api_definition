@@ -57,7 +57,7 @@ Then, to access that stream via a flash player, the following URI can be used:
 **API Call:**
 
 ``` 
-pushStream uri=rtmp://192.168.1.2 localStreamName=testpullStream targetStreamName=testpushStream 
+pushStream uri=rtmp://192.168.1.2/live localStreamName=testpullStream targetStreamName=testpushStream 
 ```
 
 **JSON Response:**
