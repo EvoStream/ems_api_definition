@@ -3,7 +3,7 @@ layout: post
 title: listInboundStreamNames
 date:   2016-01-01 00:00:00 +0000
 categories: jekyll update
-permalink: listInboundStreamNames
+permalink: listinboundstreamnames
 ---
 
 Provides a list of all the current inbound localstreamnames.
