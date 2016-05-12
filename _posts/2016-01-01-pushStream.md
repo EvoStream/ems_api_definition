@@ -3,7 +3,7 @@ layout: post
 title: pushStream
 date:   2016-01-01 00:00:00 +0000
 categories: jekyll update
-permalink: push_stream
+permalink: pushstream
 ---
 
 This will try to push a local stream to an external destination. The pushed stream can only use the RTMP, RTSP or MPEG-TS unicast/multicast protocol. 
@@ -57,7 +57,7 @@ Then, to access that stream via a flash player, the following URI can be used:
 **API Call:**
 
 ``` 
-pushStream uri=rtmp://192.168.1.2 localStreamName=testpullStream targetStreamName=testpushStream 
+pushStream uri=rtmp://192.168.1.2/live localStreamName=testpullStream targetStreamName=testpushStream 
 ```
 
 **JSON Response:**

@@ -3,7 +3,7 @@ layout: post
 title: generateLazyPullFile
 date:   2016-01-01 00:00:00 +0000
 categories: jekyll update
-permalink: generate_lazy_pull_file
+permalink: generatelazypullfile
 ---
 
 Will create a VOD file which contains details of the stream to be pulled when the file is requested.

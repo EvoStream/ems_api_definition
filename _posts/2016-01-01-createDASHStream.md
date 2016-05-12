@@ -3,7 +3,7 @@ layout: post
 title: createDASHStream
 date:   2016-01-01 00:00:00 +0000
 categories: jekyll update
-permalink: create_dash_stream
+permalink: createdashstream
 ---
 
 Create Dynamic Adaptive Streaming over HTTP (DASH) out of an existing H.264/AAC stream. DASH was developed by the Moving Picture Experts Group (MPEG) to establish a standard for HTTP adaptive-bitrate streaming that would be accepted by multiple vendors and facilitate interoperability.
@@ -36,24 +36,15 @@ createDASHStream localstreamnames=dashtest bandwidth=128 targetfolder=/MyWebRoot
 To playback the created DASH stream, use a DASH player such as the following:
 
 ``` 
-http://digitalprimates.net/dash/dashTest.html
+bitdash - www.dash-player.com
+dashif reference player - http://dashif.org/reference/players/javascript/
 ```
 
 This player is the most stable for EMS DASH playback but it doesn’t support live profile for EMS DASH.
 
 Enter the following stream URL:
 
-In other words: `http://my\_web\_server/dash\_group\_name/manifest\_file\_name`
-
-An alternative DASH player, GPAC Osmo4, can be downloaded from here:
-
-[*http://gpac.wp.mines-telecom.fr/downloads/gpac-nightly-builds/*](http://gpac.wp.mines-telecom.fr/downloads/gpac-nightly-builds/)
-
-This player supports MPEG-DASH live profile for EMS DASH.
-
-Another DASH player, Dash.as, can be downloaded from here:
-
-*[https://github.com/castlabs/dashas](https://github.com/castlabs/dashas)*
+In other words: `http://my_web_server/dash_group_name/manifest_file_name`
 
 ------
 

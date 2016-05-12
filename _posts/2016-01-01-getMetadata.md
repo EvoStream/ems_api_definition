@@ -3,7 +3,7 @@ layout: post
 title: getMetadata
 date:   2016-01-01 00:00:00 +0000
 categories: jekyll update
-permalink: get_metadata
+permalink: getmetadata
 ---
 
 Returns the most recently received string currently cached by the Metadata Manager. The call is stateless so multiple clients may each poll for metadata with no impact on each other. This may result in getting the same string multiple times if no new string has arrived.

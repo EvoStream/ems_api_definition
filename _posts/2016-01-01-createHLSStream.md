@@ -3,7 +3,7 @@ layout: post
 title: createHLSStream
 date:   2016-01-01 00:00:00 +0000
 categories: jekyll update
-permalink: create_hls_stream
+permalink: createhlsstream
 ---
 
 Create an HTTP Live Stream (HLS) out of an existingH.264/AAC stream.  HLS is used to stream live feeds to iOS devices such as iPhones and iPads.  
@@ -32,6 +32,7 @@ This function has the following parameters:
 |     AESKeyCount      |   false   |                    5                     | Specifies the number of keys that will be automatically generated and rotated over while encrypting this HLS stream |
 |      audioOnly       |   false   |                0 *false*                 | Specifies if the resulting stream will be audio only. A value of 1(true) will result in a stream without video |
 |      hlsResume       |   false   |                0 *false*                 | If true, HLS will resume in appending segments to previously created childplaylist even in cases of EMS shutdown or cut off stream source |
+|     cleanupOnClose     |   false   |                0 *false*                 | If true, corresponding hls files to a stream will be deleted if the said stream is removed or shut down or disconnected|
 |     useByteRange     |   false   |                0 *false*                 | If true, will use the EXT-X-BYTERANGE feature of HLS (version 4 and up) |
 |      fileLength      |   false   |                0 *false*                 | When using `useByteRange=1`, this parameter needs to be set too. This will be the size of file before chunking it to another file, this replace the `chunkLength` in case of EXT-X-BYTERANGE, since `chunkLength` will be the byte range chunk |
 |    useSystemTime     |   false   |                0 *false*                 | If true, uses UTC in playlist time stamp otherwise will use the local server time |

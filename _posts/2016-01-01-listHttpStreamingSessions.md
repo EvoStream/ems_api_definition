@@ -3,7 +3,7 @@ layout: post
 title: listHttpStreamingSessions
 date:   2016-01-01 00:00:00 +0000
 categories: jekyll update
-permalink: list_http_streaming_sessions
+permalink: listhttpstreamingsessions
 ---
 
 This command lists all currently active HTTP streaming sessions.

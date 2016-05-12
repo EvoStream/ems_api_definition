@@ -3,7 +3,7 @@ layout: post
 title: getConnectionInfo
 date:   2016-01-01 00:00:00 +0000
 categories: jekyll update
-permalink: get_connection_info
+permalink: getconnectioninfo
 ---
 
 Returns a detailed set of information about a connection.

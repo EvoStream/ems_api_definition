@@ -35,6 +35,7 @@ This function has the following parameters:
 |          overlays           |     false     |               *null*               | Location of the overlay source(s) to be used. These are transparent images (normally in PNG format) that have the same or smaller size than the video. Image is placed at the top-left position of the video |
 |          croppings          |     false     |               *null*               | Target video cropping position(s) and size(s) in 'left : top : width : height' format (e.g. 0:0:200:100. Positions are optional (200:100 for a centered cropping of 200 width and 100 height in pixels). Values are limited to the actual size of the video |
 |          keepAlive          |     false     |              1 *true*              | If keepAlive is set to 1, the server will restart transcoding if it was previously activated |
+|         commandFlags        |     false     |               *null*               | Other commands to the transcode process that are not supported by the baseline transcode command |
 
 An example of the transcode command is:
 
@@ -69,6 +70,12 @@ To force TCP for inbound RTSP
 ``` 
 transcode source=rtsp://<RTSP server>/live/streamname groupName=group videoBitrates=copy videoSizes=360x200 $EMS_RTSP_TRANSPORT=tcp
 ```
+
+To use command flags
+
+``` 
+transcode source=rtmp://<RTSP server>/live/streamname groupName=group destinations=destinationStream commandFlags="<command>"
+``` 
 
 To stop a running transcoding process(es)
 

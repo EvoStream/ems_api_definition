@@ -3,7 +3,7 @@ layout: post
 title: getBandwidth
 date:   2016-01-01 00:00:00 +0000
 categories: jekyll update
-permalink: get_bandwidth
+permalink: getbandwidth
 ---
 
 Returns bandwidth information: currentvalues and limits.

@@ -3,7 +3,7 @@ layout: post
 title: resetTotalFdCounters
 date:   2016-01-01 00:00:00 +0000
 categories: jekyll update
-permalink: reset_total_fd_counters
+permalink: resettotalfdcounters
 ---
 
 Reset the cumulative totals from theConnection Counters.

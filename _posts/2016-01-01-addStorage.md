@@ -3,7 +3,7 @@ layout: post
 title: addStorage
 date:   2016-01-01 00:00:00 +0000
 categories: jekyll update
-permalink: add_storage
+permalink: addstorage
 ---
 
 Adds a new storage location.

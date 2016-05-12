@@ -3,7 +3,7 @@ layout: post
 title: setBandwidthLimit
 date:   2016-01-01 00:00:00 +0000
 categories: jekyll update
-permalink: set_bandwidth_limit
+permalink: setbandwidthlimit
 ---
 
 Enforces a limit on input and output bandwidth.

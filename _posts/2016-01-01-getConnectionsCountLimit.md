@@ -3,7 +3,7 @@ layout: post
 title: getConnectionsCountLimit
 date:   2016-01-01 00:00:00 +0000
 categories: jekyll update
-permalink: get_connections_count_limit
+permalink: getconnectionscountlimit
 ---
 
 Returns the limit of concurrent connections. This is the maximum number of connections an EMS instance will allow at one time.

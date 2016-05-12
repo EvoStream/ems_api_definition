@@ -3,7 +3,7 @@ layout: post
 title: httpClientsConnected
 date:   2016-01-01 00:00:00 +0000
 categories: jekyll update
-permalink: http_clients_connected
+permalink: httpclientsconnected
 ---
 
 Returns all the clients which are currently utilizing the EWS.

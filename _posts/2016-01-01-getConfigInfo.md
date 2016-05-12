@@ -3,7 +3,7 @@ layout: post
 title: getConfigInfo
 date:   2016-01-01 00:00:00 +0000
 categories: jekyll update
-permalink: get_config_info
+permalink: getconfiginfo
 ---
 
 Returns the information of the stream by the configId.

@@ -3,7 +3,7 @@ layout: post
 title: insertPlaylistItem
 date:   2016-01-01 00:00:00 +0000
 categories: jekyll update
-permalink: insert_playlist_item
+permalink: insertplaylistitem
 ---
 
 Inserts a new item into an RTMP playlist. insertPlaylistItem may be called on playlists which are actively being played by one or more clients/players.

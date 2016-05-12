@@ -3,10 +3,10 @@ layout: post
 title: uploadMedia
 date:   2016-01-01 00:00:00 +0000
 categories: jekyll update
-permalink: upload_media
+permalink: uploadmedia
 ---
 
-Creates an acceptor which receives an HTTP POST binary upload. The acceptor will be opened on a specified port and the uploaded media file will be written on a specified directory. The acceptor then waits for an HTTP PUT from a client with the media file as payload. The media file is then written on the specified location in the server.
+Creates an acceptor which receives an HTTP POST binary upload. The acceptor will be opened on a specified port and the uploaded media file will be written on a specified directory. The acceptor then waits for an HTTP POST from a client with the media file as payload. The media file is then written on the specified location in the server.
 
 This function has the following parameters:
 
@@ -23,12 +23,6 @@ The sending client must conform to the following:
 - Content-type must be set to *video/mp4* or *application/octet-stream*
 - Content-length must be used. This function is intended for uploading VOD MP4 so the EMS will expect that the size of the file is already known
 
-An example of the uploadMedia interface is:
-
-``` 
-uploadMedia port=3333 targetFolder=/MyMediaFolder
-```
-
 ------
 
 **Example:**
@@ -36,7 +30,7 @@ uploadMedia port=3333 targetFolder=/MyMediaFolder
 **API Call:**
 
 ``` 
-shutdownstream id=55
+uploadMedia port=3333 targetFolder=/MyMediaFolder
 ```
 
 **JSON Response:**

@@ -3,7 +3,7 @@ layout: post
 title: launchProcess
 date:   2016-01-01 00:00:00 +0000
 categories: jekyll update
-permalink: launch_process
+permalink: launchprocess
 ---
 
 Allows the user to launch an external process on the local machine. This can be used to do transcoding when paired with applications such as LibAVConv and FFMPEG. 

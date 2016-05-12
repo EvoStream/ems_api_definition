@@ -3,7 +3,7 @@ layout: post
 title: getStreamsCount
 date:   2016-01-01 00:00:00 +0000
 categories: jekyll update
-permalink: get_streams_count
+permalink: getstreamscount
 ---
 
 Returns the number of active streams.

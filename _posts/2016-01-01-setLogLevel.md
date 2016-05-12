@@ -3,7 +3,7 @@ layout: post
 title: setLogLevel
 date:   2016-01-01 00:00:00 +0000
 categories: jekyll update
-permalink: set_log_level
+permalink: setloglevel
 ---
 
 Change the log level for all log appenders. Default value in the system is set in the config.lua file, which is usually set to 6.

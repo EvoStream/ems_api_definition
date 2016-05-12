@@ -3,7 +3,7 @@ layout: post
 title: listServices
 date:   2016-01-01 00:00:00 +0000
 categories: jekyll update
-permalink: list_services
+permalink: listservices
 ---
 
 Returns the list of available services.

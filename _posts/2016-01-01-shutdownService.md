@@ -3,7 +3,7 @@ layout: post
 title: shutdownService
 date:   2016-01-01 00:00:00 +0000
 categories: jekyll update
-permalink: shutdown_service
+permalink: shutdownservice
 ---
 
 Terminates a service

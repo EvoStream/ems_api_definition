@@ -3,7 +3,7 @@ layout: post
 title: createMSSStream
 date:   2016-01-01 00:00:00 +0000
 categories: jekyll update
-permalink: create_mss_stream
+permalink: createmssstream
 ---
 
 Create a Microsoft Smooth Stream (MSS) out of an existing H.264/AAC stream. Smooth Streaming was developed by Microsoft to compete with other adaptive streaming technologies.
@@ -31,11 +31,6 @@ This function has the following parameters:
 |      ingestMode      |     false     |                  single                  | Either `single` for a non looping ingest or `loop` for looping an ingest |
 
 An example of the createMSSStream interface is:
-
-To playback the created MSS stream, use a Smooth Streaming player such as one of the following:
-
-- [*http://smf.cloudapp.net/healthmonitor*](http://smf.cloudapp.net/healthmonitor)
-- [*http://playready.directtaps.net/pr/doc/slee/*](http://playready.directtaps.net/pr/doc/slee/)
 
 Enter the following stream URL: `http://My_IP_or_Domain/group1/manifest`
 
@@ -105,7 +100,7 @@ The JSON response contains the following details:
 
 
 - description – Describes the result of parsing/executing the command
-  
+
 - status – `SUCCESS` if the command was parsed and executed successfully, `FAIL` if not
-  
+
   ​

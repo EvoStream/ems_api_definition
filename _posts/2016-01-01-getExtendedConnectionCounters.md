@@ -3,7 +3,7 @@ layout: post
 title: getExtendedConnectionCounters
 date:   2016-01-01 00:00:00 +0000
 categories: jekyll update
-permalink: get_extended_connection_counters
+permalink: getextendedconnectioncounters
 ---
 
 Returns a detailed description of the network descriptors counters. This includes historical high-water-marks for different connection types and cumulative totals.

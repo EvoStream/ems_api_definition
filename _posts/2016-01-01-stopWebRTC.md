@@ -3,7 +3,7 @@ layout: post
 title: stopWebRTC
 date:   2016-01-01 00:00:00 +0000
 categories: jekyll update
-permalink: stop_web_rtc
+permalink: stopwebrtc
 ---
 
 Stops the WebRTC Signalling client to an ERS (Evostream Rendezvous Server)

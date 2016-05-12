@@ -3,7 +3,7 @@ layout: post
 title: listStreamsIds
 date:   2016-01-01 00:00:00 +0000
 categories: jekyll update
-permalink: list_streams_ids
+permalink: liststreamsids
 ---
 
 Get a list of IDs for every active stream.

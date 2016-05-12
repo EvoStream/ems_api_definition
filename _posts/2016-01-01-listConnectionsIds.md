@@ -3,7 +3,7 @@ layout: post
 title: listConnectionsIds
 date:   2016-01-01 00:00:00 +0000
 categories: jekyll update
-permalink: list_connections_ids
+permalink: listconnectionsids
 ---
 
 Returns a list containing the IDs of every active stream-related connection. This does not include other connections used for EMS operations (telnet, license manager, interface, etc.).

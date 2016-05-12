@@ -3,7 +3,7 @@ layout: post
 title: listTimers
 date:   2016-01-01 00:00:00 +0000
 categories: jekyll update
-permalink: list_timers
+permalink: listtimers
 ---
 
 This function lists currently active timers.
