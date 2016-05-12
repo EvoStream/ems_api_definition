@@ -6,10 +6,6 @@ categories: jekyll update
 permalink: playlistitemstart_firstplaylistitemstart_lastplaylistitemstart
 ---
 
-## playlistItemStart, firstPlaylistItemStart, lastPlaylistItemStart
-
-
-
 These events are created when an RTMP playlist item starts to play
 
 - playlistName - the playlist file name
