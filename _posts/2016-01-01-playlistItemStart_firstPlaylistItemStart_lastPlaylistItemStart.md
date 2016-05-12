@@ -3,7 +3,7 @@ layout: post
 title: playlistItemStart, firstPlaylistItemStart, lastPlaylistItemStart
 date:   2016-01-01 00:00:00 +0000
 categories: jekyll update
-permalink: playlistitemstart_firstplaylistitemStart_lastplaylistitemstart
+permalink: playlistitemstart_firstplaylistitemstart_lastplaylistitemstart
 ---
 
 ## playlistItemStart, firstPlaylistItemStart, lastPlaylistItemStart
