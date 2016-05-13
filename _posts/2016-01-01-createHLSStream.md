@@ -6,7 +6,7 @@ categories: jekyll update
 permalink: createhlsstream
 ---
 
-Create an HTTP Live Stream (HLS) out of an existingH.264/AAC stream.  HLS is used to stream live feeds to iOS devices such as iPhones and iPads.  
+Create an HTTP Live Stream (HLS) out of an existing H.264/AAC stream.  HLS is used to stream live feeds to iOS devices such as iPhones and iPads.  
 
 This function has the following parameters:
 
@@ -28,7 +28,7 @@ This function has the following parameters:
 |    maxChunkLength    |   false   |                    0                     | This parameter represents the maximum length, in seconds, the EMS will allow anysingle chunk to be. This is primarily in the case of `chunkOnIDR=true` where the EMS will wait for the next key-frame. If the `maxChunkLength` is less than `chunkLength`, the parameter shall be ignored |
 |    chunkBaseName     |   false   |                 segment                  | The base name used to generate the *.ts chunks |
 |      chunkOnIDR      |   false   |                 1 *true*                 | If true, chunking is performed ONLY on IDR. Otherwise, chunking is performed whenever chunk length is achieved |
-|       drmType        |   false   |                   none                   | Sets the type ofDRM encryption to use.  Options are: **none** (no encryption), **evo** (AES Encryption), **verimatrix** (Verimatrix DRM). For Verimatrix DRM, the “drm” section of the config.lua file must be active and properly configured, **SAMPLE-AES** ( |
+|       drmType        |   false   |                   none                   | Sets the type of DRM encryption to use.  Options are: **none** (no encryption), **evo** (AES Encryption), **SAMPLE-AES** (Sample-AES), **verimatrix** (Verimatrix DRM). For Verimatrix DRM, the “drm” section of the config.lua file must be active and properly configured |
 |     AESKeyCount      |   false   |                    5                     | Specifies the number of keys that will be automatically generated and rotated over while encrypting this HLS stream |
 |      audioOnly       |   false   |                0 *false*                 | Specifies if the resulting stream will be audio only. A value of 1(true) will result in a stream without video |
 |      hlsResume       |   false   |                0 *false*                 | If true, HLS will resume in appending segments to previously created childplaylist even in cases of EMS shutdown or cut off stream source |
