@@ -12,10 +12,10 @@ This function changes the compression characteristics of an audio and/or video s
 
 **IMPORTANT NOTES:**
 
-- For any parameter that is pluralized, you may specify one value, or multiple. Multiple values must be separated by only a comma (comma-delimited). Specifying multiple values indicates multiple new streams will be created.
-- There must be the same number of values for all pluralized parameters. Oder is important: all first values are grouped together to make the first stream, all second parameters are grouped to make the second stream, etc…
-- Video related parameters are ignored if the parameter ***videoBitrates*** is not specified.
-- Audio related parameters are ignored if the parameter ***audioBitrates*** is not specified.
+1. For any parameter that is pluralized, you may specify one value, or multiple. Multiple values must be separated by only a comma (comma-delimited). Specifying multiple values indicates multiple new streams will be created.
+2. There must be the same number of values for all pluralized parameters. Order is important: all first values are grouped together to make the first stream, all second parameters are grouped to make the second stream, etc…
+3. Video related parameters are ignored if the parameter ***videoBitrates*** is not specified.
+4. Audio related parameters are ignored if the parameter ***audioBitrates*** is not specified.
 
 This function has the following parameters:
 
@@ -26,12 +26,12 @@ This function has the following parameters:
 |      targetStreamNames      |     false     |   transcoded\_xxxx *(timestamp)*   | The name of the stream(s) at destination(s). If not specified, and a full URI is provided to destinations, name will have a time stamped value |
 |          groupName          |     false     | transcoded\_group\_xxxx *(random)* | The group name assigned to this process. If not specified, groupName will have a random value |
 |        videoBitrates        |     false     |       input video's bitrate        | Target output video bitrate(s) (in bits/s, append 'k' to value for kbits/s). Accepts the value 'copy' to copy the input bitrate. An empty value passed would mean no video |
-|         videoSizes          |     false     |         input video's size         | Target output video size(s) in wxh (width x height) format. IE: 240x480 |
-| videoAdvancedParamsProfiles |     false     |               *null*               | Name of video profile template that will be used. See the contents of 'evo-avconv-presets' folder for sample file presets |
-|        audioBitrates        |     false     |       input audio's bitrate        | Target output audio bitrate(s) (in bits/s, append 'k' to value for kbits/s). Accepts the value 'copy' to copy the input bitrate. An empty value passed would mean no audio |
-|     audioChannelsCounts     |     false     |    input audio's channel count     | Target output audio channel(s) count(s). Valid values are 1 (mono), 2 (stereo), and so on. Actual supported channel count is dependent on the number of input audio channels. |
-|      audioFrequencies       |     false     |      input audio's frequency       | Target output audio frequency(ies) (in Hz, append 'k' to value for kHz) |
-| audioAdvancedParamsProfiles |     false     |               *null*               | Name of audio profile template that will be used |
+|         videoSizes          |     false     |         input video's size         | Target output video size(s) in wxh (width x height) format. IE: 240x480 *See Note 3 above* |
+| videoAdvancedParamsProfiles |     false     |               *null*               | Name of video profile template that will be used. See the contents of 'evo-avconv-presets' folder for sample file presets. *See Note 3 above* |
+|        audioBitrates        |     false     |       input audio's bitrate        | Target output audio bitrate(s) (in bits/s, append 'k' to value for kbits/s). Accepts the value 'copy' to copy the input bitrate. An empty value passed would mean no audio|
+|     audioChannelsCounts     |     false     |    input audio's channel count     | Target output audio channel(s) count(s). Valid values are 1 (mono), 2 (stereo), and so on. Actual supported channel count is dependent on the number of input audio channels. *See Note 4 above*|
+|      audioFrequencies       |     false     |      input audio's frequency       | Target output audio frequency(ies) (in Hz, append 'k' to value for kHz). *See Note 4 above* |
+| audioAdvancedParamsProfiles |     false     |               *null*               | Name of audio profile template that will be used. *See Note 4 above*|
 |          overlays           |     false     |               *null*               | Location of the overlay source(s) to be used. These are transparent images (normally in PNG format) that have the same or smaller size than the video. Image is placed at the top-left position of the video |
 |          croppings          |     false     |               *null*               | Target video cropping position(s) and size(s) in 'left : top : width : height' format (e.g. 0:0:200:100. Positions are optional (200:100 for a centered cropping of 200 width and 100 height in pixels). Values are limited to the actual size of the video |
 |          keepAlive          |     false     |              1 *true*              | If keepAlive is set to 1, the server will restart transcoding if it was previously activated |
