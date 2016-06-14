@@ -23,10 +23,22 @@ This function has the following parameters:
 An example of the addStreamAlias interface is:
 
 ``` 
-addStreamAlias localStreamName=bunny aliasName=video1 expirePeriod=-300
+addStreamAlias localStreamName=mylocalstreamname aliasName=myalias expirePeriod=-300
 ```
 
-Stream with bunny as `localStreamName` will have an alias of video1.
+Stream with "**mylocalstreamname**" as `localStreamName` will have an alias of "**mystream**".
+
+You can also apply alias in VOD streams:
+
+``` 
+addStreamAlias localStreamName=mp4:myfile.mp4 aliasName=myVODalias expirePeriod=0
+```
+
+Media file with "**myfile**" filename will have an alias of "**myVODalias**"
+
+
+
+*See http://docs.evostream.com/ems_how_to_guide/vod for playback details.*
 
 ------
 
