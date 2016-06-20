@@ -227,3 +227,9 @@ The JSON response contains the following details about the stream being shut dow
 
 - description – Describes the result of parsing/executing the command
 - status – `SUCCESS` if the command was parsed and executed successfully, `FAIL` if not
+
+-----
+
+Note:
+
+The stream ID shown by the listStreams command is not the same as the config ID shown by the listConfig command. The shutdownStream command uses the stream ID, not the config ID.
