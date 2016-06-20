@@ -50,5 +50,8 @@ The JSON response contains the following details about the pull/push configurati
 - description – Describes the result of parsing/executing the command
 - status – `SUCCESS` if the command was parsed and executed successfully, `FAIL` if not
 
+-----
+
 Note:
-The config ID of a stream shown by the listConfig command is not the same as the stream ID shown by the listStreams command. The removeConfig command uses the config ID, not the stream ID.
+
+The config ID shown by the listConfig command is not the same as the stream ID shown by the listStreams command. The removeConfig command uses the config ID, not the stream ID.
