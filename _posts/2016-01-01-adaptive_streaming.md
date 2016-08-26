@@ -16,7 +16,7 @@ Event triggered when an HLS/HDS/MSS/DASH chunk file was opened on disk.
 
 Example for HLS: 
 
-`/evo-webroot/hls/stream1/segment\_1362025844863\_1362025844863\_14.ts`
+`/evo-webroot/hls/stream1/segment_1362025844863_1362025844863\_14.ts`
 
 Example for HDS: 
 
@@ -127,5 +127,16 @@ Example for DASH:
 
 `/evo-webroot/dash/stream1/manifest.mpd`
 
+------
+
+## recordChunkCreated, recordChunkClosed, recordChunkError
+
+Event triggered when a new record fragment has been opened, completed and ready on disk, or failed due to a write error
+
+**file** – Name of the record fragment that was opened, closed, or had a write error
 
 
+
+Example for MP4 record: 
+
+`/media/record/stream1_part0008.mp4`
