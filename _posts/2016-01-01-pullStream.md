@@ -65,7 +65,7 @@ Then, to access that stream via a flash player, the following URI can be used:
 **API Call:**
 
 ``` 
-pullstreamuri=rtmp://s2pchzxmtymn2k.cloudfront.net/cfx/st/mp4:sintel.mp4 localStreamname=testpullstream
+pullstream uri=rtmp://s2pchzxmtymn2k.cloudfront.net/cfx/st/mp4:sintel.mp4 localStreamname=testpullstream
 ```
 
 **JSON Response:**
