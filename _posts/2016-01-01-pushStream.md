@@ -26,6 +26,7 @@ This function has the following parameters:
 | rtmpAbsoluteTimestamps |   false   |          0 *false*          | Forces the timestamps to be absolute when using RTMP |
 |  sendChunkSizeRequest  |   false   |          1 *true*           | Sets whether the RTMP stream will or will not send a “Set Chunk Length” message.  This is significant when pushing to Akamai’s new RTMP HD ingest point where this parameter should be set to 0 so that Akamai will not drop the connection |
 |      useSourcePts      |   false   |          0 *false*          | When value is true, timestamps on source inbound RTMP stream are passed directlyto the outbound (pushed) RTMP streams. This affects only pushed Outbound Net RTMP with net RTMP source.  This parameter overrides the value of the config.lua option of the same name |
+|       httpProxy       |                  false                   |    *zero-length string*     | This parameter has two valid values: **IP:Port** – This value combination specifies an RTSP HTTP Proxy from which the RTSP stream should be pulled from **Self** - Specifying “self” as the value implies pulling RTSP over HTTP |
 
 The EMS provides several shorthand User Agent strings (not case-sensitive) for convenience:
 
