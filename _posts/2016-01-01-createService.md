@@ -33,7 +33,7 @@ This creates an acceptor for every hosted IP to accept inbound RTMP requests on 
 **API Call:**
 
 ``` 
-createService ip=127.0.0.1 port=9556 protocol=inboundRtmp
+createService ip=0.0.0.0 port=9556 protocol=inboundRtmp
 ```
 
 **JSON Response:**
