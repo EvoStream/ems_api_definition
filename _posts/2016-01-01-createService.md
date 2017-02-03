@@ -18,7 +18,7 @@ This function has the following parameters:
 |      sslCert       |     false     |      *null*       | The SSL certificate to be used     |
 |       sslKey       |     false     |      *null*       | The SSL certificate key to be used |
 
-An example of the setConnectionsLimit interface is:
+An example of the createService interface is:
 
 ``` 
 createService ip=0.0.0.0 port=9556 protocol=inboundRtmp
@@ -33,7 +33,7 @@ This creates an acceptor for every hosted IP to accept inbound RTMP requests on 
 **API Call:**
 
 ``` 
-createService ip=0.0.0.0 port=9556 protocol=inboundRtmp
+createService ip=127.0.0.1 port=9556 protocol=inboundRtmp
 ```
 
 **JSON Response:**
