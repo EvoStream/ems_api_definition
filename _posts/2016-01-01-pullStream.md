@@ -17,7 +17,7 @@ This function has the following parameters:
 |          uri          |                   true                   |           *null*            | The URI of the external stream. Can be RTMP, RTSP or unicast/multicast (d) mpegts |
 |       keepAlive       |                  false                   |          1 *true*           | If `keepAlive` is set to 1, the server will attempt to reestablish connection with astream source after a connection has been lost. The reconnect will be attemptedonce every second |
 |    localStreamName    |                  false                   |         *computed*          | If provided, the stream will be given this name. Otherwise, a fallback techniqueis used to determine the stream name (based on the URI) |
-|       forceTcp        |                  false                   |          1 *true*           | If 1 and if the stream is RTSP, a TCP connection will be forced.  Otherwise the transport mechanism will benegotiated (UDP or TCP) |
+|       forceTcp        |                  false                   |          0 *false*           | If 1 and if the stream is RTSP, a TCP connection will be forced.  Otherwise the transport mechanism will benegotiated (UDP or TCP) |
 |         tcUrl         |                  false                   |    *zero-length string*     | When specified, this value will be used to set the TC URL in the initial RTMPconnect invoke |
 |        pageUrl        |                  false                   |    *zero-length string*     | When specified, this value will be used to set the originating web page address in the initial RTMP connect invoke |
 |        swfUrl         |                  false                   |    *zero-length string*     | When specified, this value will be used to set the originating swf URL in the initial RTMP connect invoke |
@@ -56,7 +56,7 @@ Then, to access that stream via a flash player, the following URI can be used:
 
 `rtsp://AddressOfEMS:5544/RTSPteststream` 
 
-`rtmp://AddressOfEMS/live/RTSPteststream` 
+`rtmp://AddressOfEMS/live/RTMPteststream` 
 
 ------
 
