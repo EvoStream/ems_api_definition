@@ -40,7 +40,7 @@ httpClientsConnected
 **API Call:**
 
 ``` 
-httpClientsConnected
+httpClientsConnected groupName=MyGroupStream
 ```
 
 **JSON Response:**
@@ -48,7 +48,7 @@ httpClientsConnected
 ``` 
 {
 "data":{
-    "groupName":"",
+    "groupName":"MyGroupStream",
     "httpStreamingSessionsCount":2
 },
 "description":"Number of clients connected to Evostream Web Server under groupname: MyGroupStream",
